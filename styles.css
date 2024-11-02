@@ -48,8 +48,9 @@ text-align: center;
 
 .imageSection {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;     
+    align-items: center;
      
 }
 
@@ -141,4 +142,32 @@ header, section {
     #projects > p {
             width: 80%;;
             }
+}
+
+.social_media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+a {
+    color: whitesmoke; 
+    text-decoration: none; 
+}
+
+/* Color when hovering over the link */
+a:hover {
+    color: red; 
+}
+
+/* Color for visited links */
+a:visited {
+    color: whitesmoke; 
+    text-decoration: none; 
+}
+
+a:active {
+    color: orange; 
 }
