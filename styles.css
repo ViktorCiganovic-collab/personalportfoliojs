@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(221,36,118,1) 100%);
+    font-family: "Poppins", serif;
+    font-weight: 200;
+    font-style: normal;
+    text-align: center;}
+    
+
+header, section {
+    min-height: 100vh;    
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    color: whitesmoke;
+    /* background-color: #f4f4f4; */
+    transition: background-color 1.5s ease;
+}
+
+#about, #projects {
+    min-height: 100vh;
+    margin-bottom: 50vh;
+}
+
+.photo {
+border-radius: 20px;
+height: 300px;
+width: 200px;
+
+}
+
+#about > p, #projects > p {
+    max-width: 600px; /* or another value based on your design */
+    margin: 0 auto; /* Center the paragraph */
+}
+
+.project-description > p {
+width: 100% !important;
+text-align: center;
+    }
+    
+
+.imageSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;     
+     
+}
+
+.projects .img {
+    width: 300px;
+    max-width: 80%; 
+    height: 200px;
+    border-radius: 20px;
+    object-fit: cover; 
+    cursor: pointer;
+    transition: 0.2s ease-in; 
+    z-index: 1;
+    opacity: 0.5;}
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    
+    .img:hover {
+        transform: scale(1.3); /* Scale and slight rotation on hover */
+        opacity: 1; /* Ensure opacity is 1 on hover */
+    }
+    
+    .rotate {
+        animation: rotate 1s ease forwards; /* Apply rotation animation */
+    }    
+
+
+
+header {
+    /* background-color: #4a90e2; */
+    color: white;
+}
+
+/* section:nth-child(even) {
+    /* background-color: #e7e7e7; */
+/* } */ 
+
+h1, h2 {
+    margin: 0;
+}
+
+.down-arrow {
+    margin-top: 20px;
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+    transition: color 0.7s ease;
+    opacity: 1; /* Ensure it's fully visible */
+    display: block; /* Make sure it's block-level */
+}
+
+.down-arrow:hover {
+    color: #333;
+}
+
+header {
+    height: 100vh; /* This ensures the header takes the full viewport height */
+    padding: 20px; /* Add some padding if necessary */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header, section {
+    min-height: 100vh; /* Maintain full height */    
+   
+}
+
+@media only screen and (max-width: 767px) {
+   
+    
+
+    #about, #projects {
+        min-height: 100vh;
+        margin-bottom: 50vh;
+    }
+
+    #about > p {
+        width: 80%;;
+        }
+
+    #projects > p {
+            width: 80%;;
+            }
+}
