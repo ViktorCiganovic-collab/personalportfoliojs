@@ -55,9 +55,13 @@ header, section {
     display: block;
 }
 
-#projects, #technical_skills {
+#technical_skills {
     min-height: 100vh;
     margin-bottom: 30vh;
+}
+
+#projects {
+    min-height: 100vh;   
 }
 
 .photo {
@@ -174,8 +178,7 @@ header, section {
     }
 
     #projects {
-        min-height: 100vh;
-        margin-bottom: 30vh;
+        min-height: 100vh;       
     }
 
     #about > p {
