@@ -169,13 +169,3 @@ a {
 a:hover {
     color: red; 
 }
-
-/* Color for visited links */
-a:visited {
-    color: whitesmoke; 
-    text-decoration: none; 
-}
-
-a:active {
-    color: orange; 
-}
