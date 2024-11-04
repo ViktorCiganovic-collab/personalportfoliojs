@@ -117,6 +117,14 @@ h1, h2 {
     color: #333;
 }
 
+.pulse {
+    animation: pulse 1s infinite ease-in-out alternate;
+  }
+  @keyframes pulse {
+    from { transform: scale(0.8); }
+    to { transform: scale(1.2); }
+  }
+
 header {
     height: 100vh; /* This ensures the header takes the full viewport height */
     padding: 20px; /* Add some padding if necessary */
