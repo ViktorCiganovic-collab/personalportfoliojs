@@ -6,7 +6,7 @@ body {
     font-family: "Poppins", serif;
     font-weight: 200;
     font-style: normal;
-    text-align: center;
+    text-align: center;    
 }
     
 
@@ -41,7 +41,7 @@ width: 200px;
 }
 
 #about > p, #projects > p {
-    max-width: 600px; /* or another value based on your design */
+    max-width: 600px !important; /* or another value based on your design */
     margin: 0 auto; /* Center the paragraph */
 }
 
@@ -144,11 +144,11 @@ header, section {
     }
 
     #about > p {
-        width: 80%;;
+        width: 80%;
         }
 
     #projects > p {
-            width: 80%;;
+            width: 80%;
             }
 }
 
