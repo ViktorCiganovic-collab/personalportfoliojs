@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+    margin: 0;   
     font-family: Arial, sans-serif;
     background: rgb(0,0,0);
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(221,36,118,1) 100%);
@@ -11,7 +11,7 @@ body {
     
 
 header, section {
-    min-height: 100vh;    
+    min-height: 100vh; 
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -25,10 +25,37 @@ header, section {
 
 #about {
     min-height: 100vh;
-    margin-bottom: 50vh;
+    margin-bottom: 30vh;
 }
 
-#projects {
+#technical_skills {
+    display: flex;    
+    flex-wrap: wrap;
+}
+
+.bounce {
+    animation: bounce 2s ease infinite;
+  }
+  @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+      40% {transform: translateY(-30px);}
+      60% {transform: translateY(-15px);}
+  }
+
+#technical_skills > div {    
+    width: 300px;
+    max-width: 80%;
+    height: 200px;
+    border-radius: 20px;
+    border: 1px solid white;
+    box-shadow: 1px 2px 5px;
+}
+
+.skills_wrapper {
+    display: block;
+}
+
+#projects, #technical_skills {
     min-height: 100vh;
     margin-bottom: 30vh;
 }
