@@ -1,7 +1,8 @@
 
 // Create audio objects
-const clickSound = new Audio('219015__michaelkoehler__button-click-microswitch.wav');
-const typingSound = new Audio('611515__eben-frostey__key-punch.mp3'); // Replace with your typing sound file
+const clickSound = new Audio('43684__stijn__click7a.wav');
+const typingSound = new Audio(''); 
+
 
 
 // Add event listener for down arrows
@@ -35,7 +36,7 @@ function startTypingEffect(section) {
         home: "Welcome to My Portfolio" // Key matches the ID without #
     };
 
-    const text = typingTexts[section.id]; // Now this will match
+    const text = typingTexts[section.id]; 
 
     // Check if text is undefined
     if (!text) {
