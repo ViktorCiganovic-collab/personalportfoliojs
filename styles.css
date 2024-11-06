@@ -68,6 +68,7 @@ header, section {
 border-radius: 20px;
 height: 300px;
 width: 250px;
+max-width: 80%;
 
 }
 
