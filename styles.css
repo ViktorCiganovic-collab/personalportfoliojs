@@ -208,8 +208,8 @@ a:hover {
         width: 80%;
     }
 
-    #projects > p {
-        width: 80%;
+    .project {
+        width: 90%;
+        margin: 0 auto;
     }
 }
-

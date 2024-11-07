@@ -199,4 +199,3 @@ const projectDivs = document.querySelectorAll('.project');
 projectDivs.forEach(project => {
     observer.observe(project);
 });
-
