@@ -57,12 +57,13 @@ header, section {
     gap: 30px;
     color: whitesmoke;
     transition: background-color 1.5s ease;
+    
 }
 
 /* Technical Skills Section */
 #technical_skills {
-    display: flex;    
-    flex-wrap: wrap;
+    display: flex;       
+    
 }
 
 /* Slide-In from Right Animation */
@@ -96,6 +97,18 @@ header, section {
     display: block;
 }
 
+.skillsDiv, .aboutTxt {
+    opacity: 0;
+    scale: 0;
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Only transition */
+}
+
+/* When visible, apply opacity and scaling */
+.skillsDiv.visible, .aboutTxt.visible {
+    opacity: 1; /* Fade in */
+    scale: 1; /* Scale up */
+}
+
 /* About Section Image */
 .photo {
     border-radius: 20px;
@@ -117,7 +130,6 @@ header, section {
     justify-content: center;     
     align-items: center;
 }
-
 
 .grey-line {
     height: 3px;
@@ -197,7 +209,7 @@ a:hover {
 @media only screen and (max-width: 767px) {
     #about {
         min-height: 100vh;
-        margin-bottom: 50vh;
+        margin-bottom: 20vh;
     }
 
     #projects {
@@ -213,3 +225,6 @@ a:hover {
         margin: 0 auto;
     }
 }
+
+
+
