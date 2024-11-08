@@ -123,3 +123,28 @@ projectDivs.forEach(project => {
 
 
 
+
+// Get the toggle button, body, and the icon inside the button
+const toggleButton = document.getElementById('toggle-mode');
+const body = document.body;
+const icon = toggleButton.querySelector('ion-icon');  // Select the icon inside the button
+
+// Set up the toggle functionality
+toggleButton.addEventListener('click', function() {
+    // Toggle the class 'dark-mode' on the body element
+    body.classList.toggle('dark-mode');
+    
+    // Change the icon based on the current mode
+    if (body.classList.contains('dark-mode')) {
+        icon.setAttribute('name', 'sunny');  // Set moon icon for dark mode
+    } else {
+        icon.setAttribute('name', 'moon');  // Set sun icon for light mode
+    }
+});
+
+
+
+
+
+
+
