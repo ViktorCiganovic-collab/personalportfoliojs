@@ -4,9 +4,10 @@ body {
     font-family: Arial, sans-serif;
     background: rgb(0,0,0);
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(221,36,118,1) 100%);
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: italic;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
     text-align: center;
     transition: background 0.5s ease, color 0.5s ease; /* Smooth transition */
 }
