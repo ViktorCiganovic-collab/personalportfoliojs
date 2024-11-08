@@ -1,10 +1,9 @@
 /* Default (Light Mode) Styles */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+    margin: 0;    
     background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(221,36,118,1) 100%);
-    font-family: "Exo 2", sans-serif;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(221,36,118,1) 100%);    
+    font-family: "Exo 2", sans-serif, Arial, sans-serif;
     font-optical-sizing: auto;
     font-weight: 200;
     font-style: normal;
@@ -12,10 +11,16 @@ body {
     transition: background 0.5s ease, color 0.5s ease; /* Smooth transition */
 }
 
+/* Dark Mode Styles */
 body.dark-mode {
     background: linear-gradient(135deg, #1a2b3c, #333333); 
     color: #f1f1f1;
 }
+
+body.dark-mode .toggle-mode {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
 
 /* Section Layout */
 header, section {
@@ -69,7 +74,7 @@ header, section {
 .skillsDiv, .aboutTxt {
     opacity: 0;
     scale: 0;
-    transition: opacity 1s ease-in, transform 1s ease-in;
+    transition: opacity 1s ease-in 0.2s, transform 1s ease-in 0.2s;
 }
 
 .skillsDiv.visible, .aboutTxt.visible {
@@ -131,9 +136,10 @@ header, section {
 
 /* Pulse Effect for Down Arrows */
 .pulse {
-    animation: pulse 1s infinite ease-in-out alternate;
+    animation: pulse 1.5s infinite ease-in-out alternate;
 }
 
+/* Pulse effect for down arrows */
 @keyframes pulse {
     from { transform: scale(0.8); }
     to { transform: scale(1.2); }
@@ -228,4 +234,9 @@ body.dark-mode .toggle-mode ion-icon {
 /* Optional: Adjust the icon size for better display */
 ion-icon {
     font-size: 30px;
+}
+
+#mailLink {
+font-style: italic;
+font-weight: 400;
 }

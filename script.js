@@ -1,7 +1,7 @@
 
 // Create audio objects
 const clickSound = new Audio('43684__stijn__click7a.wav');
-const typingSound = new Audio(''); 
+const toggleSound = new Audio('614163__videofueralle__swishes_2_short_fast_rattle.wav')
 
 // Add event listener for down arrows
 document.querySelectorAll('.down-arrow').forEach(anchor => {
@@ -47,9 +47,7 @@ function startTypingEffect(section) {
     let index = 0;
     function type() {
         if (index < text.length) {
-            typingTextElement.textContent += text.charAt(index);
-            typingSound.currentTime = 0; 
-            typingSound.play().catch(error => console.error("Typing sound playback failed:", error)); 
+            typingTextElement.textContent += text.charAt(index);            
             index++;
             setTimeout(type, 100);
         }
@@ -129,10 +127,23 @@ const toggleButton = document.getElementById('toggle-mode');
 const body = document.body;
 const icon = toggleButton.querySelector('ion-icon');  // Select the icon inside the button
 
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+    body.classList.add(savedTheme);  // Add saved theme (dark-mode or light-mode)
+
+    if (savedTheme === 'dark-mode') {
+        icon.setAttribute('name', 'sunny')
+    } else {icon.setAttribute('name', 'moon')}
+}
+
 // Set up the toggle functionality
 toggleButton.addEventListener('click', function() {
     // Toggle the class 'dark-mode' on the body element
     body.classList.toggle('dark-mode');
+
+        // Save the current theme to localStorage
+        const theme = body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode';
+        localStorage.setItem('theme', theme);
     
     // Change the icon based on the current mode
     if (body.classList.contains('dark-mode')) {
@@ -140,9 +151,22 @@ toggleButton.addEventListener('click', function() {
     } else {
         icon.setAttribute('name', 'moon');  // Set sun icon for light mode
     }
+
+    toggleSound.play().catch(error => console.error("Audio playback failed:", error));
 });
 
 
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const email = "viktor_ciganovic@hotmail.com"; // Your email address
+    const mailLink = document.getElementById('mailLink');
+
+    // Dynamically set the href attribute
+    mailLink.href = `mailto:${email}`;
+
+    console.log(mailLink.href);  // Verifying that it's set correctly
+});
 
 
 
