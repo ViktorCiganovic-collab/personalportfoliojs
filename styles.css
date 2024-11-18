@@ -3,12 +3,9 @@ body {
     margin: 0;
     background: rgb(0, 0, 0);
     background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(221, 36, 118, 1) 100%);
-    font-family: "Exo 2", sans-serif, Arial, sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: normal;
+    font-family: "Jura", sans-serif;
     text-align: center;
-    transition: background 0.5s ease, color 0.5s ease; /* Smooth transition */
+    transition: background 0.5s ease, color 0.5s ease; 
 }
 
 /* Dark Mode Styles */
@@ -34,9 +31,27 @@ header, section {
     transition: background-color 1.5s ease;
 }
 
+#name {
+border-radius: 5px;
+text-shadow: 2px 2px 15px #333;
+}
+
+#headLine {
+background: rgb(58, 58, 136);
+padding: 15px;
+border-radius: 50px;
+text-shadow: 2px 2px 15px #333;
+max-width: 60%;
+}
+
 #about {
     max-width: 500px;
     margin: 0 auto;
+}
+
+.photo {
+    border-radius: 30px !important;  
+    object-fit: contain;
 }
 
 .skillsDivisions {
@@ -107,14 +122,16 @@ header, section {
   flex-direction: row; 
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;    
-  gap: 2rem;                           
+  align-items: center;  
+  height: auto;  
+  gap: 2rem;      
+  padding: 15px;                     
 }
 
 .project {
     width: 100%;  /* Ensure each project takes up full available width */
-    max-width: 300px;  /* Maximum width */
-    height: auto;  /* Let the height adjust according to content */
+    max-width: 300px;  /* Maximum width */    
+    height:100%;
     box-sizing: border-box; /* Ensure padding/border are part of the width/height */
     margin: 0; /* No margins */
     transition: 1s;
@@ -123,12 +140,16 @@ header, section {
 
 .project .img {
     width: 100%; /* Ensure image fills its container */
-    height: 100%; /* Let the height adjust accordingly */
+    height: 300px; /* Let the height adjust accordingly */
     border-radius: 20px;
     object-fit: cover;
     transition: 0.2s ease-in;
     z-index: 1;
     opacity: 0; /* Initially hidden */
+}
+
+#cakery {
+height: auto;
 }
 
 /* Hover Effect on Image */
@@ -244,3 +265,55 @@ ion-icon {
     font-weight: 400;
 }
 
+
+
+/* /* h3 text animation */
+.typing-text {
+    font-size: 2rem;
+    font-weight: bold; 
+    display: inline-block;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    overflow: hidden;   
+    padding-right: 5px;
+    
+}
+
+/* Create a typing effect animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Optional: Blink effect for the cursor */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Bounce-in effect for h3 (Web Designer & Front End Developer) */
+@keyframes bounceIn {
+    0% {
+        transform: translateY(-2000px);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(30px);
+        opacity: 1;
+    }
+    80% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.bounce-text {
+    animation: bounceIn 1s ease-out forwards;
+}

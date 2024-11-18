@@ -8,13 +8,17 @@
     <meta name="author" content="Viktor Ciganovic">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courgette&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@1,300&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Jura');
+</style>
 </head>
 <body>
     <header id="home">        
-        <h1 class="typing-text"></h1>
+        <h1 class="typing-text" id="name"></h1>
+        <h3 id="headLine">Web Designer & Front end developer</h3>
         <!-- Toggle Background Mode Button -->
         <button id="toggle-mode" class="toggle-mode">
             <ion-icon name="moon" size="medium"></ion-icon> <!-- Light Mode Icon -->
@@ -25,8 +29,8 @@
     </header>
 
     <section id="about">
-        <h2>About Me</h2>
-        <img src="IMG_1371.jpg" class="photo">
+        <h2 id="headLine">About Me</h2>
+        <img src="IMG_8044.PNG" class="photo">
         <p class="aboutTxt">
             My name is Viktor Ciganovic, I am a hardworking and dedicated Software Developer with great passion for programming and customer satisfaction.<br>
             I love new challenges and to grow all the time in my competence field.<br>            
@@ -36,7 +40,7 @@
     </section>
     
     <section id="technical_skills"> 
-        <h2>Technical Skills</h2> 
+        <h2 id="headLine">Technical Skills</h2> 
         <div class="skillsDivisions">      
         <div class="skillsDiv"><h4>Front End</h4><span class="skills_wrapper">HTML/CSS, Bootstrap, Tailwind</span><span class="skills_wrapper">Javascript, C#, Python</span><span class="skills_wrapper">React, Java</span></div>
         <div class="skillsDiv"><h4>Back End</h4><span class="skills_wrapper">Node.js server, MongoDB</span><span class="skills_wrapper">mongoose, PostgreSQL</span><span class="skills_wrapper">Relational Databases</span></div>
@@ -48,8 +52,19 @@
 
     <section class="sectionProjects">
 
-        <h2>Projects</h2> 
-    <div class="imageSection">        
+        <h2 id="headLine">Projects</h2> 
+    <div class="imageSection">  
+        
+        <div class="project">
+            <a href="#" target="_blank">
+            <img src="Skärmbild 2024-11-18 225508.png" id="cakery" class="img" alt="Gym Website">
+            </a>
+            <h5>Gym Website</h5>
+            <p><strong>Role:</strong> Frontend Developer</p>
+            <p><strong>Technologies:</strong> React, Bootstrap, SCSS</p>
+            <p><strong>Challenges:</strong> A team project focused on creating a responsive website for home workout videos, providing users with easy access to a variety of training sessions that can be done from the comfort of their homes.</p>
+        </div>
+
         <div class="project">
             <a href="https://codepen.io/ViktorCiganovic/full/QWRKoJJ" target="_blank">
             <img src="Skärmbild 2024-11-05 222723.png" class="img" alt="Online Calculator Project">
@@ -89,7 +104,7 @@
 
         <div class="project">
             <a href="https://mynodeapp-bwfy.onrender.com/index.html" target="_blank">
-            <img src="Skärmbild 2024-11-02 185243.png" class="img" alt="Cakery Website">
+            <img src="Skärmbild 2024-11-18 224622.png" id="cakery" class="img" alt="Cakery Website">
             </a>
             <h5>Cakery Website</h5>
             <p><strong>Role:</strong> Web Developer</p>
@@ -114,7 +129,7 @@
     </section>
 
     <section id="contact">
-        <h2>How to reach out</h2>
+        <h2 id="headLine">How to reach out</h2>
         <a id="mailLink">
             <ion-icon name="mail" size="small"></ion-icon> Email Me
         </a>

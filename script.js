@@ -31,7 +31,8 @@ function startTypingEffect(section) {
     console.log("Typing effect started"); 
 
     const typingTexts = {
-        home: "Welcome to My Portfolio" 
+        home: "Viktor Ciganovic",
+        about: "Web designer & Front End Developer"
     };
 
     const text = typingTexts[section.id]; 
