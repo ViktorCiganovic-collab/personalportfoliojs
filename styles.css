@@ -1,7 +1,8 @@
 /* Default (Light Mode) Styles */
 body {
     margin: 0;
-    background-color: rgb(26, 105, 173);
+    background: rgb(35,35,38);
+    background: radial-gradient(circle, rgba(35,35,38,1) 0%, rgba(9,9,121,1) 100%, rgba(0,212,255,1) 100%);
     font-family: "Jura", sans-serif;
     text-align: center;
     transition: background 0.5s ease, color 0.5s ease; 
@@ -9,7 +10,7 @@ body {
 
 /* Dark Mode Styles */
 body.dark-mode {
-    background: linear-gradient(135deg, #1a2b3c, #333333);
+    background: black;
     color: #f1f1f1;
 }
 
@@ -55,6 +56,7 @@ max-width: 60%;
 #about {
     max-width: 500px;
     margin: 0 auto;
+    border-bottom: 1px solid gray;
     
 }
 
@@ -63,14 +65,7 @@ max-width: 60%;
     object-fit: contain;
 }
 
-#technical_skills {
-    background-image: url("https://www.splitshire.com/wp-content/uploads/2015/03/SplitShire-8098-1800x1200.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;  
-    width: 100%;
-    height: auto;
-}
+
 
 .skillsDivisions {
     display: flex;
@@ -135,7 +130,14 @@ max-width: 60%;
 }
 
 .sectionProjects {
-   
+    
+        background-image: url("https://www.splitshire.com/wp-content/uploads/2015/03/SplitShire-8098-1800x1200.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;  
+        width: 100%;
+        height: auto;
+    
 }
 
 
@@ -158,8 +160,7 @@ max-width: 60%;
     box-sizing: border-box; /* Ensure padding/border are part of the width/height */
     margin: 0; /* No margins */
     transition: 1s;
-    cursor: pointer; 
-    background-color: #1a2b3c;
+    cursor: pointer;    
     border-radius: 20px;
    
 }
