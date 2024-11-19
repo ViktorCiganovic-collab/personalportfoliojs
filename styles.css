@@ -54,10 +54,18 @@ max-width: 60%;
 }
 
 #about {
-    max-width: 500px;
+    max-width: 400px;
     margin: 0 auto;
     border-bottom: 1px solid gray;
     
+}
+
+@media screen and (max-width: 600px) {
+
+    #about {
+        max-width: 90%;
+    }
+
 }
 
 .photo {
