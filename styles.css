@@ -1,8 +1,7 @@
 /* Default (Light Mode) Styles */
 body {
     margin: 0;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(221, 36, 118, 1) 100%);
+    background-color: rgb(26, 105, 173);
     font-family: "Jura", sans-serif;
     text-align: center;
     transition: background 0.5s ease, color 0.5s ease; 
@@ -28,7 +27,16 @@ header, section {
     flex-direction: column;
     gap: 30px;
     color: whitesmoke;
-    transition: background-color 1.5s ease;
+    transition: background-color 1.5s ease;    
+}
+
+#home {
+    background-image: url("https://www.econcepts.ie/wp-content/uploads/2016/04/bp_background_2_blue1.jpg");
+	width: 100%;
+    height: auto;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 #name {
@@ -37,7 +45,7 @@ text-shadow: 2px 2px 15px #333;
 }
 
 #headLine {
-background: rgb(58, 58, 136);
+background: rgb(58, 58, 136) !important;
 padding: 15px;
 border-radius: 50px;
 text-shadow: 2px 2px 15px #333;
@@ -47,11 +55,21 @@ max-width: 60%;
 #about {
     max-width: 500px;
     margin: 0 auto;
+    
 }
 
 .photo {
     border-radius: 30px !important;  
     object-fit: contain;
+}
+
+#technical_skills {
+    background-image: url("https://www.splitshire.com/wp-content/uploads/2015/03/SplitShire-8098-1800x1200.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;  
+    width: 100%;
+    height: auto;
 }
 
 .skillsDivisions {
@@ -116,6 +134,11 @@ max-width: 60%;
     max-width: 80%;
 }
 
+.sectionProjects {
+   
+}
+
+
 /* Image Section Styling */
 .imageSection {
   display: flex;
@@ -136,6 +159,9 @@ max-width: 60%;
     margin: 0; /* No margins */
     transition: 1s;
     cursor: pointer; 
+    background-color: #1a2b3c;
+    border-radius: 20px;
+   
 }
 
 .project .img {
@@ -316,4 +342,13 @@ ion-icon {
 
 .bounce-text {
     animation: bounceIn 1s ease-out forwards;
+}
+
+#contact {
+    background-image: url("https://million-wallpapers.ru/wallpapers/4/35/503339429260115/apple-nastolnye.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+    width: 100%;
+    height: auto;
 }
