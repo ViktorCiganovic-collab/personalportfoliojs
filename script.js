@@ -1,7 +1,7 @@
 
 // Create audio objects
 const clickSound = new Audio('43684__stijn__click7a.wav');
-const toggleSound = new Audio('614163__videofueralle__swishes_2_short_fast_rattle.wav')
+const toggleSound = new Audio('348005__samuelcable__turn-light-on.wav');
 
 // Add event listener for down arrows
 document.querySelectorAll('.down-arrow').forEach(anchor => {
@@ -160,13 +160,13 @@ toggleButton.addEventListener('click', function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    const email = "viktor_ciganovic@hotmail.com"; // Your email address
+    const email = "viktor_ciganovic@hotmail.com"; 
     const mailLink = document.getElementById('mailLink');
 
     // Dynamically set the href attribute
     mailLink.href = `mailto:${email}`;
 
-    console.log(mailLink.href);  // Verifying that it's set correctly
+    console.log(mailLink.href);  
 });
 
 

@@ -9,8 +9,8 @@ body {
 }
 
 /* Dark Mode Styles */
-body.dark-mode {
-    background: black;
+body.dark-mode {  
+    background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
     color: #f1f1f1;
 }
 
