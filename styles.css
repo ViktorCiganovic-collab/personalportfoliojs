@@ -76,6 +76,7 @@ max-width: 60%;
 #technical_skills {
 height: auto;
 width: 100%;
+margin-bottom: 20vh;
 }
 
 
@@ -139,6 +140,16 @@ width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20vh;
+}
+
+.certsDiv div {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+gap: 2rem;
 }
 
 .certsDiv h2 {
@@ -158,6 +169,10 @@ transition: 0.7s;
 
 .imgCert:hover {
 transform: scale(1.05);
+}
+
+#js {
+height: 200px;
 }
 
 /* About Section Image */
