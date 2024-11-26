@@ -134,6 +134,32 @@ width: 100%;
     scale: 1;
 }
 
+.certsDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.certsDiv h2 {
+background: rgb(58, 58, 136) !important;
+padding: 15px;
+border-radius: 50px;
+text-shadow: 2px 2px 15px #333;
+}
+
+.imgCert {
+height: 300px;
+max-width: 80%;
+width: 200px !important;
+cursor: pointer;
+transition: 0.7s;
+}
+
+.imgCert:hover {
+transform: scale(1.05);
+}
+
 /* About Section Image */
 .photo {
     border-radius: 20px;
