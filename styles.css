@@ -164,15 +164,23 @@ height: 300px;
 max-width: 80%;
 width: 200px !important;
 cursor: pointer;
-transition: 0.7s;
+transition: 0.3s;
 }
 
 .imgCert:hover {
-transform: scale(1.05);
+transform: scale(1.15);
+}
+
+@media (max-width: 768px) {
+    .imgCert:hover {
+        transform: none;
+        }
+
+
 }
 
 #js {
-height: 200px;
+height: 110px;
 }
 
 /* About Section Image */
@@ -215,11 +223,12 @@ height: 200px;
     height: 100%;
     box-sizing: border-box; /* Ensure padding/border are part of the width/height */
     margin: 0; /* No margins */
-    transition: 1s;
+    transition: 0.3s;
     cursor: pointer;    
     border-radius: 20px;
     background-color: transparent;
-   
+    border-bottom: 1px solid gray;
+     
 }
 
 .project .img {
@@ -239,8 +248,14 @@ max-width: 250px;
 
 /* Hover Effect on Image */
 .project:hover {
-    transform: scale(1.04);         /* Slight zoom effect */
+    transform: scale(0.98);         /* Slight zoom effect */
     opacity: 1;                    /* Make the image visible on hover */
+}
+
+@media (max-width: 768px) {
+    .project:hover {
+        transform: none; /* Disable hover effect on mobile */
+    }
 }
 
 /* Pulse Effect for Down Arrows */
@@ -308,16 +323,16 @@ a:hover {
 
 
     .imageSection {
-        flex-direction: column;      /* Stack items vertically on small screens */
-        align-items: center;         /* Center the items */
-        gap: 1rem;                   /* Add space between items */
+        flex-direction: column;      
+        align-items: center;        
+        gap: 1rem;                  
     }
 
     .project {
-        width: 90%;                   /* Make each project take up 90% of the container */
-        max-width: 400px;             /* Optional: limit max width */
-        margin: 0 auto;               /* Center each project item */
-        border-bottom: 1px solid gray;
+        width: 90%;                   
+        max-width: 400px;            
+        margin: 0 auto;             
+       
     }
 }
 
@@ -344,7 +359,7 @@ a:hover {
 
 /* Ionicons styling */
 ion-icon {
-    pointer-events: none; /* Prevent clicks on the icon itself */
+    pointer-events: none; 
     transition: transform 0.3s ease;
 }
 
