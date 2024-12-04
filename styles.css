@@ -203,10 +203,16 @@ height: 200px;
   padding: 15px;                     
 }
 
+@media (min-width: 1200px) {
+    .imageSection {
+        width: 80%;
+    }
+}
+
 .project {
     width: 100%;  /* Ensure each project takes up full available width */
-    max-width: 300px;  /* Maximum width */    
-    height:100%;
+    max-width: 500px;   
+    height: 100%;
     box-sizing: border-box; /* Ensure padding/border are part of the width/height */
     margin: 0; /* No margins */
     transition: 1s;
@@ -228,11 +234,12 @@ height: 200px;
 
 #cakery {
 height: auto;
+max-width: 250px;
 }
 
 /* Hover Effect on Image */
 .project:hover {
-    transform: scale(1.1);         /* Slight zoom effect */
+    transform: scale(1.04);         /* Slight zoom effect */
     opacity: 1;                    /* Make the image visible on hover */
 }
 
