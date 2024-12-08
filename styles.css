@@ -2,7 +2,8 @@
 body {
     margin: 0;
     background: rgb(35,35,38);
-    background: radial-gradient(circle, rgba(35,35,38,1) 0%, rgba(9,9,121,1) 100%, rgba(0,212,255,1) 100%); 
+    background: linear-gradient(90deg, rgb(26, 26, 29) 27.1%, rgb(111, 34, 50) 77.5%);
+    
     font-family: "Jura", sans-serif;
     text-align: center;
     transition: background 0.5s ease, color 0.5s ease; 
