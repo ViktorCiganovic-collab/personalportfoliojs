@@ -256,6 +256,10 @@ max-width: 250px;
 @media (max-width: 768px) {
     .project:hover {
         transform: none; /* Disable hover effect on mobile */
+    } 
+
+    .project .img {
+        height: auto;
     }
 }
 
@@ -304,6 +308,10 @@ a:hover {
 
 /*Media Query for Tablet*/
 @media (max-width: 1100px) { 
+
+    .project:hover {
+        transform: none; /* Disable hover effect on mobile */
+    } 
 
     #technical_skills {
     background-attachment: scroll;}
