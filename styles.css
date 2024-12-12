@@ -1,9 +1,9 @@
 /* Default (Light Mode) Styles */
 body {
-    margin: 0;
-    background: rgb(35,35,38);
-    background: linear-gradient(90deg, rgb(26, 26, 29) 27.1%, rgb(111, 34, 50) 77.5%);
-    
+    margin: 0;  
+    background: url('https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-108756.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: "Jura", sans-serif;
     text-align: center;
     transition: background 0.5s ease, color 0.5s ease; 
@@ -11,7 +11,7 @@ body {
 
 /* Dark Mode Styles */
 body.dark-mode {  
-    background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
+    background: linear-gradient(to bottom, #000000, #141414);
     color: #f1f1f1;
 }
 
@@ -56,7 +56,8 @@ max-width: 60%;
 
 #about {
     max-width: 400px;
-    margin: 0 auto;
+    margin: 0 auto;    
+    background: url('https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-108756.jpg');
     /* border-bottom: 1px solid gray; */
     
 }
@@ -64,14 +65,14 @@ max-width: 60%;
 @media screen and (max-width: 600px) {
 
     #about {
-        max-width: 90%;
+        max-width: 100%;
     }
 
 }
 
-.photo {
-    border-radius: 30px !important;  
+.photo {     
     object-fit: contain;
+    border-radius: 30% !important;
 }
 
 #technical_skills {
@@ -93,19 +94,18 @@ margin-bottom: 20vh;
 .skillsDiv {
     width: 300px;
     max-width: 80%;
-    height: 200px;
-    border-radius: 20px;
-    border: 1px solid white !important;
-    box-shadow: 1px 2px 5px;
+    height: 320px;
+    border-radius: 20px;    
+    
     box-sizing: border-box; /* Include border and padding in width/height calculations */
     padding: 10px;
-    background: purple;
+    background: ;
 }
 
 /* Slide-In from Right Animation */
 .slide-in-right {
     opacity: 1 !important;
-    animation: slide-in-right 1s ease-out forwards;
+    animation: slide-in-right 0.7s ease-out forwards;
 }
 
 @keyframes slide-in-right {
@@ -123,6 +123,7 @@ margin-bottom: 20vh;
 /* Skills Wrapper */
 .skills_wrapper {
     display: block;
+    margin: 8px;
 }
 
 .skillsDiv, .aboutTxt {
@@ -161,8 +162,8 @@ text-shadow: 2px 2px 15px #333;
 }
 
 .imgCert {
-height: 300px;
-max-width: 80%;
+height: 200px;
+max-width: 100%;
 width: 200px !important;
 cursor: pointer;
 transition: 0.3s;
@@ -180,9 +181,6 @@ transform: scale(1.15);
 
 }
 
-#js {
-height: 110px;
-}
 
 /* About Section Image */
 .photo {
