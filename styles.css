@@ -95,11 +95,10 @@ margin-bottom: 20vh;
     width: 300px;
     max-width: 80%;
     height: 320px;
-    border-radius: 20px;    
-    
+    border-radius: 20px;        
     box-sizing: border-box; /* Include border and padding in width/height calculations */
     padding: 10px;
-    background: ;
+    
 }
 
 /* Slide-In from Right Animation */
