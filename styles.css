@@ -96,15 +96,10 @@ margin-bottom: 20vh;
     max-width: 80%;
     height: auto;
     border-radius: 20px;        
-    box-sizing: border-box; /* Include border and padding in width/height calculations */
+    box-sizing: border-box; 
     padding: 10px;    
 }
 
-/* Slide-In from Right Animation */
-.slide-in-right {
-    opacity: 1 !important;
-    animation: slide-in-right 0.7s ease-out forwards;
-}
 
 @keyframes slide-in-right {
     0% {
@@ -215,11 +210,11 @@ transform: scale(1.15);
 }
 
 .project {
-    width: 100%;  /* Ensure each project takes up full available width */
+    width: 100%;  
     max-width: 500px;   
     height: 100%;
-    box-sizing: border-box; /* Ensure padding/border are part of the width/height */
-    margin: 0; /* No margins */
+    box-sizing: border-box; 
+    margin: 0; 
     transition: 0.3s;
     cursor: pointer;    
     border-radius: 20px;
@@ -228,14 +223,34 @@ transform: scale(1.15);
      
 }
 
+.imgCert {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.slide-in-right {
+    opacity: 1 !important;
+    transform: scale(1);
+    animation: slide-in-right 0.7s ease-out forwards;
+}
+
 .project .img {
-    width: 100%; /* Ensure image fills its container */
-    height: 300px; /* Let the height adjust accordingly */
+    width: 100%; 
+    height: 300px; 
     border-radius: 20px;
-    object-fit: cover;
-    transition: 0.2s ease-in;
+    object-fit: cover;    
     z-index: 1;
-    opacity: 0; /* Initially hidden */
+    transform: scale(0.5);
+    opacity: 0;
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+/* Slide-In from Right Animation */
+.active {
+    opacity: 1 !important;
+    transform: scale(1);
+    animation: slide-in-right 0.7s ease-out forwards;
 }
 
 #cakery {

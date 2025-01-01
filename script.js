@@ -85,21 +85,17 @@ window.addEventListener('scroll', function() {
 
 
 
-
-
-
-// Intersection Observer for Slide-In from Right Animation
 function onIntersection(entries, observer) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             console.log("Element is in view: ", entry.target); 
 
-            // Trigger the slide-in-right animation for images inside project divs
+           
             if (entry.target.closest('.project')) {
                 const images = entry.target.querySelectorAll('.img');
                 images.forEach(image => {
-                    image.style.opacity = '1'; // Set opacity to 1 when in view
-                    image.classList.add('slide-in-right'); // Apply Slide-In animation
+                    image.style.opacity = '1'; 
+                    image.style.transform = 'scale(1)';                    
                 });
             }
 
@@ -121,25 +117,62 @@ projectDivs.forEach(project => {
 });
 
 
+//Start animation certificates
 
 
-// Get the toggle button, body, and the icon inside the button
+function observerOptionsProjects(entries, observant) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            console.log("Element is in view: ", entry.target); 
+
+         
+            if (entry.target.closest('.certificate')) {
+                const images = entry.target.querySelectorAll('.imgCert');
+                images.forEach(image => {
+                    image.style.opacity = '1'; 
+                    image.style.transform = 'scale(1)';                    
+                });
+            }
+
+            observant.unobserve(entry.target); 
+        }
+    });
+}
+
+const observOptions = {
+    threshold: 0.5 // Trigger when 50% of the element is in view
+};
+
+const observant = new IntersectionObserver(observerOptionsProjects, observOptions);
+
+// Observe each certificate element
+const certificateDivs = document.querySelectorAll('.certificate');
+certificateDivs.forEach(certificate => {
+    observant.observe(certificate);
+});
+
+//end of animation certificates
+
+
+
+
+
 const toggleButton = document.getElementById('toggle-mode');
 const body = document.body;
-const icon = toggleButton.querySelector('ion-icon');  // Select the icon inside the button
+const icon = toggleButton.querySelector('ion-icon'); 
 
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme) {
-    body.classList.add(savedTheme);  // Add saved theme (dark-mode or light-mode)
+    body.classList.add(savedTheme);  
 
     if (savedTheme === 'dark-mode') {
         icon.setAttribute('name', 'sunny')
     } else {icon.setAttribute('name', 'moon')}
 }
 
-// Set up the toggle functionality
+
 toggleButton.addEventListener('click', function() {
-    // Toggle the class 'dark-mode' on the body element
+  
     body.classList.toggle('dark-mode');
 
         // Save the current theme to localStorage
@@ -163,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const email = "viktor_ciganovic@hotmail.com"; 
     const mailLink = document.getElementById('mailLink');
 
-    // Dynamically set the href attribute
+   
     mailLink.href = `mailto:${email}`;
 
     console.log(mailLink.href);  
