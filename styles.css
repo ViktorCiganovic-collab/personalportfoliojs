@@ -88,29 +88,18 @@ width: 100%;
 margin-bottom: 20vh;
 }
 
-.skillsDivisions {
-    display: grid;
-    gap: 1rem;
-    justify-items: center;
-    
-}
 
-@media (min-width: 470px) {
+@media (min-width: 480px) {
+
+    .skillsDivisions {
+        display: grid;
+        gap: 1rem;
+        justify-items: center;
+        
+    }
+
     .skillsDivisions {
         grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-
-@media (max-width: 469px) {
-    .skillsDivisions {
-        grid-template-columns: 1fr 1fr; 
-    }
-
-}
-
-@media (max-width: 350px) {
-    .skillsDivisions {
-        grid-template-columns: 1fr; 
     }
 }
 
@@ -120,6 +109,29 @@ margin-bottom: 20vh;
     height: auto;         
     box-sizing: border-box;          
    
+}
+
+.slider {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+
+.sliderBtns {    
+    
+    font-size: 20px;
+    color: #f1f1f1;
+    background: rgb(58, 58, 136);
+}
+
+  
+
+
+.sliderBtns:hover {
+    cursor: pointer;
 }
 
 
