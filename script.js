@@ -57,23 +57,23 @@ function startTypingEffect(section) {
 }
 
 window.addEventListener('scroll', function() {
-    var txt = document.querySelectorAll('.aboutTxt');  // Select all .aboutTxt elements
-    var windowHeight = window.innerHeight;  // Viewport height
-    var scrollTop = window.scrollY;  // Scroll position
+    var txt = document.querySelectorAll('.aboutTxt');  
+    var windowHeight = window.innerHeight; 
+    var scrollTop = window.scrollY;  
 
     txt.forEach(function(div) {
-        var elementOffset = div.getBoundingClientRect().top + scrollTop;  // Position of each div
+        var elementOffset = div.getBoundingClientRect().top + scrollTop;  
         if (scrollTop + windowHeight > elementOffset) {
-            div.classList.add('visible');  // Add the "visible" class when it's in view
+            div.classList.add('visible');  
         }
     });
 });
 
 
 window.addEventListener('scroll', function() {
-    var skillsDivs = document.querySelectorAll('.skillsDiv');  // Select all .skillsDiv elements
-    var windowHeight = window.innerHeight;  // Viewport height
-    var scrollTop = window.scrollY;  // Scroll position
+    var skillsDivs = document.querySelectorAll('.skillsDiv');  
+    var windowHeight = window.innerHeight;  
+    var scrollTop = window.scrollY;  
 
     skillsDivs.forEach(function(div) {
         var elementOffset = div.getBoundingClientRect().top + scrollTop;  // Position of each div
@@ -328,7 +328,7 @@ const showOnlyOne = () => {
 
     currentIndex = currentIndex === 0 ? technicalSkills.length - 1 : currentIndex - 1;
     showOnlyOne();
-    
+
   }
   
   
