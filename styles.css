@@ -347,13 +347,19 @@ max-width: 250px;
     gap: 15px;
 }
 
+
 a {
     color: whitesmoke;
     text-decoration: none;
+    transition: 0.5s;
 }
 
-a:hover {
-    color: red;
+.social_media a:hover {
+    transform: scale(1.2);    
+}
+
+#mailLink:hover {
+    transform: scale(1.2);
 }
 
 /*Media Query for Tablet*/
