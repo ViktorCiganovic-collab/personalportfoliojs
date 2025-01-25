@@ -103,22 +103,33 @@ margin-bottom: 20vh;
     }
 }
 
-.skillsDiv {
-    width: 170px;
-    max-width: 80%;
-    height: auto;         
-    box-sizing: border-box;          
-   
-}
-
-.slider {
+.skills_wrapper {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 1s ease, transform 2s ease; /* Adjust timing for smoother transition */
+  }
+  
+  .skills_wrapper.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .slider {
     display: flex;
     position: relative;
     width: 100%;
     justify-content: center;
     align-items: center;
-    overflow: hidden; 
-}
+    overflow: hidden;
+    opacity: 0; /* Start with hidden state */
+    transform: scale(0.9); /* Optional: To make the whole slider slightly smaller initially */
+    transition: opacity 1s ease, transform 1s ease; /* Transition to fade in and scale up */
+  }
+  
+  .slider.show {
+    opacity: 1;
+    transform: scale(1); /* Scale back to normal */
+  }
 
 .sliderBtns {    
     
@@ -126,8 +137,6 @@ margin-bottom: 20vh;
     color: #f1f1f1;
     background: rgb(58, 58, 136);
 }
-
-  
 
 
 .sliderBtns:hover {

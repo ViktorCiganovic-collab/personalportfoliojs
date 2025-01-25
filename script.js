@@ -250,14 +250,14 @@ var technicalSkills = [
   skillsWrapper.innerHTML = ''; // Clear any existing content
   technicalSkills.map((skill, index) => {
 
-    // Start by adding the category
+   
     skillsWrapper.innerHTML += `
-      <div class="skillsDiv">
+      <div class="skillsDivMany">
         <h4>${skill.category}</h4>
         ${skill.details.map((detail, detailIndex) => {
-          // Now we are iterating over the details array
+         
           return `
-            <div class="skills_wrapper">
+            <div class="skills_wrapperForAllItemsDisplayed">
               <i class="${detail.icon}"></i> ${detail.name}
             </div>
           `;
@@ -270,13 +270,12 @@ var technicalSkills = [
 }
 
 const showOnlyOne = () => {
-    skillsWrapper.innerHTML = ''; // Clear any existing content    
-
-    // Get the first skill and display it
+    skillsWrapper.innerHTML = '';     
+  
+    
     const skill = technicalSkills[currentIndex];
     skillsWrapper.innerHTML = `
       <div class="slider">
-        <!-- Slider buttons positioned on the sides -->
         <button class="sliderBtns" id="prevBtn" onclick="previousSkill()"><</button>
   
         <div class="skillsDiv">
@@ -293,8 +292,24 @@ const showOnlyOne = () => {
         <button class="sliderBtns" id="nextBtn" onclick="nextSkill()">></button>
       </div>
     `;
+  
+    
+    const slider = skillsWrapper.querySelector('.slider');
+    const skillWrappers = skillsWrapper.querySelectorAll('.skills_wrapper');
+    
+    
+    setTimeout(() => {
+      slider.classList.add('show'); 
+      skillWrappers.forEach((item) => {
+        item.classList.add('visible'); 
+      });
+    }, 0); 
+  
+    
+    isInViewPort(skillWrappers);
   };
-
+  
+  
 
   const updateSkillsDisplay = () => {
     if (window.innerWidth >= 480) {
@@ -317,7 +332,7 @@ const showOnlyOne = () => {
 
     currentIndex = currentIndex === technicalSkills.length - 1 ? 0 : currentIndex + 1;
     
-    showOnlyOne();
+    showOnlyOne();   
 
   }
 
@@ -329,4 +344,28 @@ const showOnlyOne = () => {
 
   }
   
+
+
+  function isInViewPort(viewedContent) {
+    viewedContent.forEach((item) => {  
+      const itemContent = item.innerHTML.trim();
+      let matched = false;
+  
+      technicalSkills.forEach((skill) => {
+        skill.details.forEach((detail) => {
+          const skillContent = `${detail.icon} ${detail.name}`.trim();
+  
+          if (itemContent === skillContent) {
+            matched = true;
+  
+            item.classList.add('visible'); // Add the visible class to start transition
+          }
+        });
+      });
+  
+      if (!matched) {
+        item.classList.remove('visible'); // Remove visible class to reset opacity and scale
+      }
+    });
+  }
   
