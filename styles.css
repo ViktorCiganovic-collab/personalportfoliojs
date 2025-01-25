@@ -94,13 +94,13 @@ margin-bottom: 20vh;
     justify-items: center;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .skillsDivisions {
         grid-template-columns: 1fr 1fr 1fr; /* Three columns on larger screens */
     }
 }
 
-@media (min-width: 401px) and (max-width: 1023px) {
+@media (min-width: 401px) and (max-width: 767px) {
     .skillsDivisions {
         grid-template-columns: 1fr 1fr; /* Two columns on medium screens, including phones */
     }
