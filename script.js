@@ -70,20 +70,18 @@ window.addEventListener('scroll', function() {
 });
 
 
-window.addEventListener('scroll', function() {
-    var skillsDivs = document.querySelectorAll('.skillsDiv');  
-    var windowHeight = window.innerHeight;  
-    var scrollTop = window.scrollY;  
+// window.addEventListener('scroll', function() {
+//     var skillsDivs = document.querySelectorAll('.skillsDiv');  
+//     var windowHeight = window.innerHeight;  
+//     var scrollTop = window.scrollY;  
 
-    skillsDivs.forEach(function(div) {
-        var elementOffset = div.getBoundingClientRect().top + scrollTop;  // Position of each div
-        if (scrollTop + windowHeight > elementOffset) {
-            div.classList.add('visible');  // Add the "visible" class when it's in view
-        }
-    });
-});
-
-
+//     skillsDivs.forEach(function(div) {
+//         var elementOffset = div.getBoundingClientRect().top + scrollTop;  // Position of each div
+//         if (scrollTop + windowHeight > elementOffset) {
+//             div.classList.add('visible');  // Add the "visible" class when it's in view
+//         }
+//     });
+// });
 
 function onIntersection(entries, observer) {
     entries.forEach(entry => {
