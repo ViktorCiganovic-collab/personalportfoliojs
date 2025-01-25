@@ -92,33 +92,33 @@ margin-bottom: 20vh;
     display: grid;
     gap: 1rem;
     justify-items: center;
+    
 }
 
-@media (min-width: 768px) {
+@media (min-width: 470px) {
     .skillsDivisions {
-        grid-template-columns: 1fr 1fr 1fr; /* Three columns on larger screens */
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
-@media (min-width: 401px) and (max-width: 767px) {
+@media (max-width: 469px) {
     .skillsDivisions {
-        grid-template-columns: 1fr 1fr; /* Two columns on medium screens, including phones */
+        grid-template-columns: 1fr 1fr; 
     }
+
 }
 
-@media (max-width: 420px) {
+@media (max-width: 350px) {
     .skillsDivisions {
-        grid-template-columns: 1fr; /* One column on smaller screens */
+        grid-template-columns: 1fr; 
     }
 }
 
 .skillsDiv {
-    width: 200px;
+    width: 170px;
     max-width: 80%;
-    height: auto;
-    border-radius: 20px;        
-    box-sizing: border-box; 
-    padding: 10px;        
+    height: auto;         
+    box-sizing: border-box;          
    
 }
 
