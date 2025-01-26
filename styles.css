@@ -22,6 +22,20 @@ body {
     transition: background 0.5s ease, color 0.5s ease; 
 }
 
+@media (max-width: 1024px) {
+
+    body {
+        background: 
+        linear-gradient(180deg, 
+            rgba(0, 0, 15, 1) 0%,    /* Very dark blue (almost black) */
+            rgba(0, 0, 35, 0.9) 40%, /* Darker blue, closer to black */
+            rgba(0, 0, 60, 0.8) 70%, /* Darker medium blue */
+            rgba(0, 0, 100, 0.6) 100%); /* Darker lighter blue */
+    background-size: cover;
+    background-attachment: fixed;
+    }
+}
+
 /* Dark Mode Styles */
 body.dark-mode {  
     background: url('https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-108756.jpg');
