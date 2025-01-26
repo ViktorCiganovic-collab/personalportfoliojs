@@ -242,7 +242,7 @@ transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s, background-color 0.3s
         }
 
     .imgCert {
-        height: 80px;
+        height: 100px;
         width: 10px;
     }
 
