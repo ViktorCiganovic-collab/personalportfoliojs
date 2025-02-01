@@ -240,7 +240,8 @@ var technicalSkills = [
         { name: "Bash", icon: "fa-solid fa-terminal" },
         { name: "Data Visualization", icon: "fa-solid fa-chart-line" },
         { name: "Azure Fundamentals", icon: "fa-solid fa-cloud-sun" },
-        { name: "React native", icon: "fa-brands fa-react" }
+        { name: "React native", icon: "fa-brands fa-react" },
+        { name: "Wordpress", icon: "fa-brands fa-wordpress"}
       ]
     }
   ]
