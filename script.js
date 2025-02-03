@@ -207,7 +207,7 @@ const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 var currentIndex = 0;
 
-var technicalSkills = [
+var technicalSkills = [    
     {
       category: "Front End",
       details: [
@@ -216,16 +216,17 @@ var technicalSkills = [
         { name: "Bootstrap", icon: "fa-brands fa-bootstrap" },
         { name: "Tailwind", icon: "fa-brands fa-css3-alt" },
         { name: "JavaScript", icon: "fa-brands fa-js" },
-        { name: "C#", icon: "fa-brands fa-microsoft" },
-        { name: "Python", icon: "fa-brands fa-python" },
         { name: "React", icon: "fa-brands fa-react" },
-        { name: "Java", icon: "fa-brands fa-java" }
+        { name: "React Native", icon: "fa-brands fa-react" },
+        { name: "WordPress", icon: "fa-brands fa-wordpress" }  // Moved WordPress to Front-End
       ]
     },
     {
       category: "Back End",
       details: [
-        { name: "Node.js server", icon: "fa-brands fa-node-js" },
+        { name: "Node.js", icon: "fa-brands fa-node-js" },
+        { name: "Express.js", icon: "fa-brands fa-node-js" },
+        { name: "C#", icon: "fa-brands fa-microsoft" },
         { name: "MongoDB", icon: "fa-solid fa-database" },
         { name: "Mongoose", icon: "fa-solid fa-database" },
         { name: "PostgreSQL", icon: "fa-solid fa-database" },
@@ -240,10 +241,12 @@ var technicalSkills = [
         { name: "Bash", icon: "fa-solid fa-terminal" },
         { name: "Data Visualization", icon: "fa-solid fa-chart-line" },
         { name: "Azure Fundamentals", icon: "fa-solid fa-cloud-sun" },
-        { name: "React native", icon: "fa-brands fa-react" },
-        { name: "Wordpress", icon: "fa-brands fa-wordpress"}
+        { name: "Java", icon: "fa-brands fa-java" },
+        { name: "Python", icon: "fa-brands fa-python" },
+        { name: "Network Fundamentals", icon: "fa-solid fa-network-wired" }
       ]
     }
+    
   ]
 
   const showSkills = () => {

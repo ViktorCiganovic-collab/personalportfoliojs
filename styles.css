@@ -83,7 +83,7 @@ border-radius: 5px;
 text-shadow: 2px 2px 15px #333;
 }
 
-#headLine {
+.headLine {
 background: rgb(58, 58, 136) !important;
 padding: 15px;
 border-radius: 50px;
