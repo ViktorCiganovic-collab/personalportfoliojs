@@ -1,7 +1,7 @@
 
 // Create audio objects
-const clickSound = new Audio('43684__stijn__click7a.wav');
-const toggleSound = new Audio('348005__samuelcable__turn-light-on.wav');
+const clickSound = new Audio('687105__aphom000__mouse-1-button-fast-click.wav');
+const toggleSound = new Audio('622060__rydra_wong__button-click.wav');
 
 // Add event listener for down arrows
 document.querySelectorAll('.down-arrow').forEach(anchor => {
