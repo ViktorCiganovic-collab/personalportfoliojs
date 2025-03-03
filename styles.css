@@ -70,7 +70,7 @@ header, section {
 }
 
 #home {
-    background-image: url("https://www.econcepts.ie/wp-content/uploads/2016/04/bp_background_2_blue1.jpg");
+    background-image: url("./images/bp_background_2_blue1.jpg");
 	width: 100%;
     height: auto;
 	background-size: cover;
