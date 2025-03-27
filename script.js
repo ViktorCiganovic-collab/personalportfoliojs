@@ -243,7 +243,8 @@ var technicalSkills = [
         { name: "Azure Fundamentals", icon: "fa-solid fa-cloud-sun" },
         { name: "Java", icon: "fa-brands fa-java" },
         { name: "Python", icon: "fa-brands fa-python" },
-        { name: "Network Fundamentals", icon: "fa-solid fa-network-wired" }
+        { name: "Network Fundamentals", icon: 'fa-solid fa-network-wired' },
+        { name: "Typescript", icon: "fa-brands fa-js"}
       ]
     }
     
