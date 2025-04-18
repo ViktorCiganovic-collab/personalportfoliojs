@@ -246,14 +246,50 @@ var technicalSkills = [
         { name: "Network Fundamentals", icon: 'fa-solid fa-network-wired' },
         { name: "Typescript", icon: "fa-brands fa-js"}
       ]
+    },
+    {
+      category: "CMS + Tools",
+      details: [
+        { name: "Webflow", icon: "fa-solid fa-laptop" }, 
+        { name: "WordPress", icon: "fa-brands fa-wordpress" },       
+        { name: "Drupal", icon: "fa-brands fa-drupal" },     
+      ]
+    },
+    {
+      category: "JavaScript Frameworks",
+      details: [
+        { name: "Next.js", icon: "fa-solid fa-forward" }, 
+        { name: "Angular", icon: "fa-brands fa-angular" },
+        { name: "Vue.js", icon: "fa-brands fa-vuejs" },
+        { name: "React", icon: "fa-brands fa-react" },      
+        { name: "Node.js", icon: "fa-brands fa-node-js" },
+        { name: "Express.js", icon: "fa-brands fa-node-js" }
+      ]
+    },
+    {
+      category: "Cloud Platforms",
+      details: [
+        { name: "AWS", icon: "fa-brands fa-aws" },
+        { name: "Azure", icon: "fa-brands fa-microsoft" },           
+      ]
     }
     
   ]
 
+  let start = 0;
+  let itemsPerSlide = 3;
+  let end = start + itemsPerSlide;
+ 
+
   const showSkills = () => {
 
+  const displayedCategories = technicalSkills.slice(start, end);
+
+ 
   skillsWrapper.innerHTML = ''; // Clear any existing content
-  technicalSkills.map((skill, index) => {
+
+  
+  displayedCategories.map((skill, index) => {
 
    
     skillsWrapper.innerHTML += `
@@ -267,10 +303,31 @@ var technicalSkills = [
             </div>
           `;
         }).join('')}  <!-- Join to ensure the details are added correctly -->
-      </div>
-    `;
+      </div>     
+    `; 
   
   });
+}; 
+
+const nextSkillSet = () => {
+
+  skillsWrapper.classList.add('transitioning');
+
+  setTimeout(function() {
+
+  start += itemsPerSlide;
+  end = start + itemsPerSlide;
+
+  if (start >= technicalSkills.length) {
+    start = 0;
+    end = itemsPerSlide;
+  }
+
+  showSkills();
+
+  skillsWrapper.classList.remove('transitioning');
+
+}, 500);
 
 }
 
@@ -314,7 +371,7 @@ const showOnlyOne = () => {
     isInViewPort(skillWrappers);
   };
   
-  
+  const refreshBtn = document.querySelector('.sliderRefreshBtn');
 
   const updateSkillsDisplay = () => {
     if (window.innerWidth >= 480) {
@@ -323,6 +380,7 @@ const showOnlyOne = () => {
     } else {
       // Show only one skill at a time for small screens
       showOnlyOne();
+      refreshBtn.style.display = 'none';
     }
   };
   
