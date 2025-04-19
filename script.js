@@ -1,7 +1,8 @@
 
 // Create audio objects
-const clickSound = new Audio('687105__aphom000__mouse-1-button-fast-click.wav');
-const toggleSound = new Audio('622060__rydra_wong__button-click.wav');
+const clickSound = new Audio('./sounds/622060__rydra_wong__button-click.wav');
+const toggleSound = new Audio('./sounds/622060__rydra_wong__button-click.wav');
+const refreshSound = new Audio('/sounds/461017__alanmcki__fast-whoosh.wav');
 
 // Add event listener for down arrows
 document.querySelectorAll('.down-arrow').forEach(anchor => {
@@ -310,6 +311,9 @@ var technicalSkills = [
 }; 
 
 const nextSkillSet = () => {
+
+  refreshSound.currentTime = 0; // rewind to start
+  refreshSound.play();
 
   skillsWrapper.classList.add('transitioning');
 
