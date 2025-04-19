@@ -2,7 +2,7 @@
 // Create audio objects
 const clickSound = new Audio('./sounds/622060__rydra_wong__button-click.wav');
 const toggleSound = new Audio('./sounds/622060__rydra_wong__button-click.wav');
-const refreshSound = new Audio('https://viktorciganovic-collab.github.io/personalportfoliojs/sounds/461017__alanmcki__fast-whoosh.mp3');
+const refreshSound = new Audio('./sounds/563879__woutertenbrink__swoosh.mp3');
 
 // Add event listener for down arrows
 document.querySelectorAll('.down-arrow').forEach(anchor => {
@@ -309,6 +309,7 @@ var technicalSkills = [
   
   });
 }; 
+
 
 const nextSkillSet = async  () => {
 
