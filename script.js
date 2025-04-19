@@ -2,7 +2,7 @@
 // Create audio objects
 const clickSound = new Audio('./sounds/622060__rydra_wong__button-click.wav');
 const toggleSound = new Audio('./sounds/622060__rydra_wong__button-click.wav');
-const refreshSound = new Audio('/sounds/461017__alanmcki__fast-whoosh.wav');
+const refreshSound = new Audio('/sounds/461017__alanmcki__fast-whoosh.mp3');
 
 // Add event listener for down arrows
 document.querySelectorAll('.down-arrow').forEach(anchor => {
