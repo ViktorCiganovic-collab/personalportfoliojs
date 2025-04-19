@@ -310,10 +310,14 @@ var technicalSkills = [
   });
 }; 
 
-const nextSkillSet = () => {
+const nextSkillSet = async  () => {
 
+  try {
   refreshSound.currentTime = 0; // rewind to start
-  refreshSound.play();
+  await refreshSound.play(); }
+  catch (e) {
+    console.error('Audio play failed:', e);
+  }
 
   skillsWrapper.classList.add('transitioning');
 
