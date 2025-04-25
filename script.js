@@ -71,18 +71,7 @@ window.addEventListener('scroll', function() {
 });
 
 
-// window.addEventListener('scroll', function() {
-//     var skillsDivs = document.querySelectorAll('.skillsDiv');  
-//     var windowHeight = window.innerHeight;  
-//     var scrollTop = window.scrollY;  
 
-//     skillsDivs.forEach(function(div) {
-//         var elementOffset = div.getBoundingClientRect().top + scrollTop;  // Position of each div
-//         if (scrollTop + windowHeight > elementOffset) {
-//             div.classList.add('visible');  // Add the "visible" class when it's in view
-//         }
-//     });
-// });
 
 function onIntersection(entries, observer) {
     entries.forEach(entry => {
@@ -114,44 +103,6 @@ const projectDivs = document.querySelectorAll('.project');
 projectDivs.forEach(project => {
     observer.observe(project);
 });
-
-
-//Start animation certificates
-
-
-function observerOptionsProjects(entries, observant) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            console.log("Element is in view: ", entry.target); 
-
-         
-            if (entry.target.closest('.certificate')) {
-                const images = entry.target.querySelectorAll('.imgCert');
-                images.forEach(image => {
-                    image.style.opacity = '1'; 
-                    image.style.transform = 'scale(1)';                    
-                });
-            }
-
-            observant.unobserve(entry.target); 
-        }
-    });
-}
-
-const observOptions = {
-    threshold: 0.5 // Trigger when 50% of the element is in view
-};
-
-const observant = new IntersectionObserver(observerOptionsProjects, observOptions);
-
-// Observe each certificate element
-const certificateDivs = document.querySelectorAll('.certificate');
-certificateDivs.forEach(certificate => {
-    observant.observe(certificate);
-});
-
-//end of animation certificates
-
 
 
 
@@ -440,4 +391,253 @@ const showOnlyOne = () => {
       }
     });
   }
+
+  const arrayCertifications = [
+    {
+      type: "front-end-development-libraries",
+      url: "https://www.freecodecamp.org/certification/ViktorCiganovic/front-end-development-libraries",
+      imgUrl: "https://files.softicons.com/download/social-media-icons/classic-social-media-icons-by-brainleaf/png/128x128/bootstrap-icon.png"
+    },
+    {
+      type: "database",
+      url: "https://www.freecodecamp.org/certification/ViktorCiganovic/relational-database-v8",
+      imgUrl: "https://api.nuget.org/v3-flatcontainer/easydata.entityframeworkcore.relational/1.5.7/icon"
+    },
+    {
+      type: "javascript",
+      url: "https://www.freecodecamp.org/certification/ViktorCiganovic/javascript-algorithms-and-data-structures-v8",
+      imgUrl: "https://cdn.iconscout.com/icon/free/png-256/free-javascript-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-vol-4-pack-logos-icons-3031512.png?f=webp&w=128"
+    }
+  ];
   
+  const divisionCertifications = document.querySelector('.certsDivision');
+  let certsAreShown = false;
+  let currentCertIndex = 0;
+  
+  const certObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  
+  const showAllCerts = () => {
+    divisionCertifications.innerHTML = '';
+    arrayCertifications.forEach(cert => {
+      divisionCertifications.innerHTML += `
+        <div class="certificate">
+          <a href="${cert.url}" target="_blank">
+            <img class="certificationsImages" alt="certification" src="${cert.imgUrl}">
+          </a>
+        </div>
+      `;
+    });
+  
+    document.querySelectorAll('.certificationsImages').forEach(img => {
+      certObserver.observe(img);
+    });
+  
+    certsAreShown = true;
+  };
+  
+  const showSingleCert = (index) => {
+    const cert = arrayCertifications[index];
+    divisionCertifications.innerHTML = `
+      <div class="cert-slider">
+        <button class="cert-nav-arrow" id="prevCert">&larr;</button>
+  
+        <div class="certificate single-cert">
+          <a href="${cert.url}" target="_blank">
+            <img class="certificationsImages" alt="certification" src="${cert.imgUrl}">
+          </a>
+        </div>
+  
+        <button class="cert-nav-arrow" id="nextCert">&rarr;</button>
+      </div>
+    `;
+  
+    document.querySelectorAll('.certificationsImages').forEach(img => {
+      certObserver.observe(img);
+    });
+  
+    document.getElementById('prevCert').onclick = () => {
+      currentCertIndex = (currentCertIndex === 0)
+        ? arrayCertifications.length - 1
+        : currentCertIndex - 1;
+      showSingleCert(currentCertIndex);
+    };
+  
+    document.getElementById('nextCert').onclick = () => {
+      currentCertIndex = (currentCertIndex === arrayCertifications.length - 1)
+        ? 0
+        : currentCertIndex + 1;
+      showSingleCert(currentCertIndex);
+    };
+  
+    certsAreShown = true;
+  };
+  
+  const updateCertificationsDisplay = () => {
+    if (window.innerWidth >= 480) {
+      if (!certsAreShown || divisionCertifications.children.length === 1) {
+        showAllCerts();
+      }
+    } else {
+      if (!certsAreShown || divisionCertifications.children.length > 1) {
+        showSingleCert(currentCertIndex);
+      }
+    }
+  };
+  
+  document.addEventListener('DOMContentLoaded', updateCertificationsDisplay);
+  window.addEventListener('resize', updateCertificationsDisplay);
+
+  const projects = [
+    {
+      title: "Movie streaming app",
+      url: "/",
+      imgUrl: "./images/Skärmbild 2024-11-26 095101.png",
+      role: "Fullstack Developer",
+      technologies: "React, Tailwind, Node.js",
+      challenges: "A responsive movie app with search filter function that was created by me with React, react router for the links and state management for the login process."
+    },
+    {
+      title: "Ecommerce Website",
+      url: "https://shoeshopper.vercel.app/",
+      imgUrl: "./images/eCommercewebsite.png",
+      role: "Fullstack Developer",
+      technologies: "React, Tailwind, CSS",
+      challenges: "A responsive e-commerce web app built with React and Tailwind CSS. It features product browsing, detailed views, and a shopping cart with localStorage persistence. React Router ensures smooth navigation across devices. The design is fully responsive for an optimal shopping experience on mobile and desktop, showcasing my skills in React, state management, and UI design."
+    },
+    {
+      title: "Gym Website",
+      url: "https://gym-app-rho-khaki.vercel.app/",
+      imgUrl: "./images/gymwebsite.png",
+      role: "Frontend Developer",
+      technologies: "React, Bootstrap, SCSS",
+      challenges: "A team project focused on creating a responsive website for home workout videos, providing users with easy access to a variety of training sessions that can be done from the comfort of their homes."
+    },
+    {
+      title: "Online Calculator",
+      url: "https://codepen.io/ViktorCiganovic/full/QWRKoJJ",
+      imgUrl: "./images/online_calculator.png",
+      role: "Frontend Developer",
+      technologies: "HTML, CSS, JavaScript",
+      challenges: "Ensured precision in calculations, handled user input validation to prevent errors, and created an intuitive and responsive layout that enhances user interaction."
+    },
+    {
+      title: "Exercise Browser App",
+      url: "https://exercise-browser-app.vercel.app",
+      imgUrl: "./images/Skärmbild 2024-12-09 121048.png",
+      role: "Frontend Developer",
+      technologies: "React, Bootstrap, React Router",
+      challenges: "Built with React, Bootstrap, and React Router, this app lets users browse and search for fitness exercises. Users can filter results in real-time and view detailed information by navigating to individual exercise pages. It showcases state management with useState, dynamic rendering, and responsive design with Bootstrap."
+    },
+    {
+      title: "Travel Booking Web App",
+      url: "https://voyavista-gvcnd9azepede2as.northeurope-01.azurewebsites.net/Travelpackage",
+      imgUrl: "./images/voyavista-fotor-20250425173648.png",
+      role: "Fullstack Developer",
+      technologies: "ASP.NET MVC, Entity Framework, SQL Server, Stripe",
+      challenges: "Developed a fullstack web application where customers can view and book trips to various destinations. Utilized Entity Framework and SQL Server for database management, and integrated Stripe for payment processing. The application features a user-friendly interface, allowing customers to view available trips by date and make secure bookings."
+    },
+    {
+      title: "Munamii Cakery",
+      url: "https://mynodeapp-bwfy.onrender.com",
+      imgUrl: "https://i.postimg.cc/CLr30h3w/Sk-rmbild-2025-02-06-133431.png",
+      role: "Fullstack Developer",
+      technologies: "HTML, Bootstrap, JavaScript, MongoDB Atlas",
+      challenges: "Developed a responsive web application for a cakery where customers can browse cakes and cupcakes, and place orders. The application integrates MongoDB Atlas for database management to handle orders and inventory. I ensured the site’s responsiveness, allowing a seamless experience across all devices. The ordering functionality allows users to view product details and submit their orders online, with a simple and efficient interface."
+    },
+    {
+      title: "Music Media Player",
+      url: "/",
+      imgUrl: "https://i.postimg.cc/QxZBbD4x/Sk-rmbild-2025-02-06-125218.png",
+      role: "Frontend Developer",
+      technologies: "HTML, CSS, JavaScript",
+      challenges: "Developed an interactive and responsive music media player where users can play, pause, shuffle, and skip through songs. The app allows users to control volume, view track details (song name, artist), and enjoy a dynamic playlist. It features a clean interface and smooth transitions. The project uses HTML, CSS, and JavaScript for building a fully-functional music player with features such as a progress bar, volume control, and playlist management."
+    }
+  ];
+  
+  
+
+  const imageSection = document.querySelector('.imageSection');
+
+  const generateProjects = () => {
+    imageSection.innerHTML = ''; // Clear the previous content
+  
+    projects.forEach((project) => {
+      imageSection.innerHTML += `
+         <div class="project">
+            <a href="${project.url}" target="_blank">
+            <img src="${project.imgUrl}" class="img" alt="Cash Register Project">
+            </a>
+            <h5>${project.title}</h5>
+            <p><strong>Role:</strong>${project.role}</p>
+            <p><strong>Technologies:</strong>${project.technologies}</p>
+            <p><strong>Challenges:</strong>${project.challenges}</p>
+        </div>
+      `;
+    });
+  }; 
+  
+
+  var indexofProject = 0;
+
+  const showOneProject = () => {
+    const { title, url, imgUrl } = projects[indexofProject];
+  
+    imageSection.innerHTML = `
+      <div class="project-nav">
+        
+        <div class="project-details">
+          <h3>${title}</h3>
+          <a href="${url}" target="_blank">
+            <img src="${imgUrl}" class="projectImgsForPhone" alt="${title}">
+          </a>
+        </div>
+  
+      </div>
+    `;
+  };
+  
+  const nextProject = async () => {
+    const projectContainer = document.querySelector('.imageSection');
+  
+    // Apply fade-out effect
+    projectContainer.classList.add('project-hidden');
+  
+    try {
+      refreshSound.currentTime = 0;
+      await refreshSound.play();
+    } catch (e) {
+      console.error('Audio play failed:', e);
+    }
+  
+    // Wait for fade-out to finish, then switch project and fade back in
+    setTimeout(() => {
+      indexofProject = (indexofProject + 1) % projects.length;
+      showOneProject();
+  
+      // Re-apply fade-in
+      setTimeout(() => {
+        projectContainer.classList.remove('project-hidden');
+      }, 50); // allow DOM to update before fading back in
+    }, 400); // match this with your CSS transition time
+  };
+  
+  
+
+  
+  const updateProjectsView = () => {
+    if (window.innerWidth >= 480) {
+      generateProjects();      
+    } else {
+      showOneProject(); // Assume this function handles full list view for desktop
+    }
+  };
+  
+  window.addEventListener('DOMContentLoaded', updateProjectsView);
+  window.addEventListener('resize', updateProjectsView);

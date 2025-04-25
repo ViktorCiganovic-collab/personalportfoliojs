@@ -43,7 +43,7 @@
 <body>
     <header id="home">        
         <h1 class="typing-text" id="name">Viktor Ciganovic</h1>
-        <h3 class="headLine">Web Designer & Front-End Developer</h3>
+        <h3 class="title">Web Designer & Fullstack Developer</h3>
         <!-- Toggle Background Mode Button -->
         <button id="toggle-mode" class="toggle-mode" aria-label="Toggle Light/Dark Mode" title="Toggle Light/Dark Mode">
             <ion-icon name="moon" size="medium"></ion-icon>
@@ -88,22 +88,12 @@
     
 
     <section class="certsDiv">
-        <h2>Certifications</h2>
-        <div>  
+        <h2 class="headLine" id="certHeader">Certifications</h2>
+        <div class="certsDivision">  
 
-        <div class="certificate">
-        <a href="https://www.freecodecamp.org/certification/ViktorCiganovic/front-end-development-libraries" target="_blank"><img src="https://files.softicons.com/download/social-media-icons/classic-social-media-icons-by-brainleaf/png/128x128/bootstrap-icon.png" class="imgCert"></img></a>
+      
         </div>
 
-        <div class="certificate">
-        <a href="https://www.freecodecamp.org/certification/ViktorCiganovic/relational-database-v8" target="_blank"><img class="imgCert" alt="certifications" src="https://api.nuget.org/v3-flatcontainer/easydata.entityframeworkcore.relational/1.5.7/icon"></img></a>
-        </div>
-
-        <div class="certificate">
-        <a href="https://www.freecodecamp.org/certification/ViktorCiganovic/javascript-algorithms-and-data-structures-v8" target="_blank"><img src="https://cdn.iconscout.com/icon/free/png-256/free-javascript-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-vol-4-pack-logos-icons-3031512.png?f=webp&w=128" class="imgCert" id="js"></img></a>
-        </div>
-
-        </div>
         <a href=".sectionProjects" class="down-arrow pulse arrow_to_projectsections"><ion-icon name="chevron-down-circle-outline"></ion-icon></a>
     </section>       
         
@@ -111,101 +101,18 @@
 
     <section class="sectionProjects">
 
-        <h2 class="headLine">Projects</h2> 
-    <div class="imageSection">  
+        <h2 class="headLine">Projects <div class="skillsRefreshWrapper">
+            <button class="sliderRefreshBtn projectRenew" onclick="nextProject()">
+              <i class="fa-solid fa-rotate-right"></i>
+            </button>
+          </div></h2>  
+    <div class="imageSection">    
 
-    
 
-        <div class="project">
-            <a href="https://shoeshopper.vercel.app/" target="_blank">
-            <img src="./images/Skärmbild 2024-11-24 123048.png" class="img" alt="Cash Register Project">
-            </a>
-            <h5>Ecommerce Website</h5>
-            <p><strong>Role:</strong> Fullstack Developer</p>
-            <p><strong>Technologies:</strong> React, Tailwind, CSS</p>
-            <p><strong>Challenges:</strong> A responsive e-commerce web app built with React and Tailwind CSS. It features product browsing, detailed views, and a shopping cart with localStorage persistence. React Router ensures smooth navigation across devices. The design is fully responsive for an optimal shopping experience on mobile and desktop, showcasing my skills in React, state management, and UI design.</p>
-        </div>
-        
-        <div class="project">
-            <a href="https://gym-app-rho-khaki.vercel.app/" target="_blank">
-            <img src="./images/Skärmbild 2024-11-18 225508.png" class="img" alt="Gym Website">
-            </a>
-            <h5>Gym Website</h5>
-            <p><strong>Role:</strong> Frontend Developer</p>
-            <p><strong>Technologies:</strong> React, Bootstrap, SCSS</p>
-            <p><strong>Challenges:</strong> A team project focused on creating a responsive website for home workout videos, providing users with easy access to a variety of training sessions that can be done from the comfort of their homes.</p>
-        </div>
-
-        <div class="project">
-            <a href="https://codepen.io/ViktorCiganovic/full/QWRKoJJ" target="_blank">
-            <img src="./images/Skärmbild 2024-11-05 222723.png" class="img" alt="Online Calculator Project">
-            </a>
-            <h5>Online Calculator</h5>
-            <p><strong>Role:</strong> Frontend Developer</p>
-            <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
-            <p><strong>Challenges:</strong> Ensured precision in calculations, handled user input validation to prevent errors, <br>and created an intuitive and responsive layout that enhances user interaction.</p>
-        </div>        
-      
-        <div class="project">
-            <a href="https://exercise-browser-app.vercel.app" target="_blank">
-            <img src="./images/Skärmbild 2024-12-09 121048.png" class="img" alt="Todo app">
-            </a>
-            <h5>Exercise Browser App</h5>    
-            <p><strong>Role:</strong> Frontend Developer</p>
-            <p><strong>Technologies:</strong> React, Bootstrap, React Router</p>
-            <p><strong>Challenges:</strong> Built with React, Bootstrap, and React Router, this app lets users browse and search for fitness exercises. Users can filter results in real-time and view detailed information by navigating to individual exercise pages. It showcases state management with useState, dynamic rendering, and responsive design with Bootstrap.</p>
-        </div>
-
-        <div class="project">
-            <a href="https://voyavista-gvcnd9azepede2as.northeurope-01.azurewebsites.net/Travelpackage" target="_blank">
-                <img src="https://i.postimg.cc/zXxdhx77/Sk-rmbild-2025-02-06-125736.png" class="img" alt="User login project">
-            </a>
-            <h5>Travel Booking Web App</h5>
-            <p><strong>Role:</strong> Fullstack Developer</p>
-            <p><strong>Technologies:</strong> ASP.NET MVC, Entity Framework, SQL Server, Stripe</p>
-            <p><strong>Challenges:</strong> Developed a fullstack web application where customers can view and book trips to various destinations. Utilized Entity Framework and SQL Server for database management, and integrated Stripe for payment processing. The application features a user-friendly interface, allowing customers to view available trips by date and make secure bookings.</p>
-        </div>
-        
-
-        <div class="project">
-            <a href="/" target="_blank">
-            <img src="./images/Skärmbild 2024-11-26 095101.png" class="img" alt="Movie app">
-            </a>
-            <h5>Movie streaming app</h5>
-            <p><strong>Role:</strong> Fullstack Developer</p>
-            <p><strong>Technologies:</strong> React, Tailwind, Node.js</p>
-            <p><strong>Challenges:</strong> A responsive movie app with search filter function that was created by me with React, react router for the links and state management for the login process.</p>
-        </div>
-
-        <div class="project">
-            <a href="https://mynodeapp-bwfy.onrender.com" target="_blank">
-                <img src="https://i.postimg.cc/CLr30h3w/Sk-rmbild-2025-02-06-133431.png" class="img" alt="Munamii Cakery project">
-            </a>
-            <h5>Munamii Cakery</h5>
-            <p><strong>Role:</strong> Fullstack Developer</p>
-            <p><strong>Technologies:</strong> HTML, Bootstrap, JavaScript, MongoDB Atlas</p>
-            <p><strong>Challenges:</strong> Developed a responsive web application for a cakery where customers can browse cakes and cupcakes, and place orders. The application integrates MongoDB Atlas for database management to handle orders and inventory. I ensured the site’s responsiveness, allowing a seamless experience across all devices. The ordering functionality allows users to view product details and submit their orders online, with a simple and efficient interface.</p>
-        </div>
-
-        <div class="project">
-            <a href="/" target="_blank">
-                <img src="https://i.postimg.cc/QxZBbD4x/Sk-rmbild-2025-02-06-125218.png" class="img" alt="Music Media Player Project">
-            </a>
-            <h5>Music Media Player</h5>
-            <p><strong>Role:</strong> Frontend Developer</p>
-            <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
-            <p><strong>Challenges:</strong> 
-                Developed an interactive and responsive music media player where users can play, pause, shuffle, and skip through songs. The app allows users to control volume, view track details (song name, artist), and enjoy a dynamic playlist. It features a clean interface and smooth transitions. The project uses HTML, CSS, and JavaScript for building a fully-functional music player with features such as a progress bar, volume control, and playlist management.
-            </p>
-        </div>
-        
-        
-        
-        
     </div>
     
     <a href="#contact" class="down-arrow pulse"><ion-icon name="chevron-down-circle-outline"></ion-icon></a>
-    </section>
+    </section> 
 
     <section id="contact">
         <h2 class="headLine">How to reach out</h2>
