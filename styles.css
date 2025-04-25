@@ -441,7 +441,7 @@ a {
 
 @media (max-width: 500px) {
     .sectionProjects {
-        height: 100vh;
+        height: auto;
     }
 }
 
@@ -601,7 +601,9 @@ ion-icon {
     }
   }
 
-  
+  .oneProjectTitle {
+    background: rgb(58, 58, 136) !important;
+  }
   
   .project-details {
     text-align: center;
