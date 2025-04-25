@@ -601,7 +601,7 @@ ion-icon {
     }
   }
 
-  .oneProjectTitle {
+  .oneProjectTitle, .titleEnding {
     background: rgb(58, 58, 136) !important;
   }
   
