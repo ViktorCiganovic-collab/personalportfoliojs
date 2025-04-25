@@ -530,7 +530,7 @@ const showOnlyOne = () => {
     {
       title: "Exercise Browser App",
       url: "https://exercise-browser-app.vercel.app",
-      imgUrl: "./images/Skärmbild 2024-12-09 121048.png",
+      imgUrl: "./images/wordpress.png",
       role: "Frontend Developer",
       technologies: "React, Bootstrap, React Router",
       challenges: "Built with React, Bootstrap, and React Router, this app lets users browse and search for fitness exercises. Users can filter results in real-time and view detailed information by navigating to individual exercise pages. It showcases state management with useState, dynamic rendering, and responsive design with Bootstrap."
