@@ -546,7 +546,7 @@ const showOnlyOne = () => {
     {
       title: "Munamii Cakery",
       url: "https://mynodeapp-bwfy.onrender.com",
-      imgUrl: "https://i.postimg.cc/CLr30h3w/Sk-rmbild-2025-02-06-133431.png",
+      imgUrl: "./images/munami.png",
       role: "Fullstack Developer",
       technologies: "HTML, Bootstrap, JavaScript, MongoDB Atlas",
       challenges: "Developed a responsive web application for a cakery where customers can browse cakes and cupcakes, and place orders. The application integrates MongoDB Atlas for database management to handle orders and inventory. I ensured the site’s responsiveness, allowing a seamless experience across all devices. The ordering functionality allows users to view product details and submit their orders online, with a simple and efficient interface."

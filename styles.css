@@ -151,6 +151,9 @@ margin-bottom: 20vh;
     cursor: pointer;
     color: #444;
     transition: transform 0.5s ease;
+    transform-origin: center center;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
   }
   
   .sliderRefreshBtn:hover {
