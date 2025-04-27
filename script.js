@@ -538,7 +538,7 @@ const showOnlyOne = () => {
     {
       title: "Travel Booking Web App",
       url: "https://voyavista-gvcnd9azepede2as.northeurope-01.azurewebsites.net/Travelpackage",
-      imgUrl: "./images/voyavista-fotor-20250425173648.png",
+      imgUrl: "./images/tripbookingwebsite.png",
       role: "Fullstack Developer",
       technologies: "ASP.NET MVC, Entity Framework, SQL Server, Stripe",
       challenges: "Developed a fullstack web application where customers can view and book trips to various destinations. Utilized Entity Framework and SQL Server for database management, and integrated Stripe for payment processing. The application features a user-friendly interface, allowing customers to view available trips by date and make secure bookings."
