@@ -4,6 +4,7 @@
     height: 100%;
     margin: 0;
     scroll-behavior: smooth;
+    
   }
   #about {
   min-height: 100vh;
@@ -100,13 +101,13 @@ header, section {
     border-bottom: 1px solid white;
 }
 
-@media (max-width: 600px) {
-  body {
-    background-attachment: scroll !important;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-    background: linear-gradient(180deg, #000000 0%, #1a1a1a 50%, #333333 100%) !important;
 
+@media (max-width: 600px) {
+  section {
+      background: linear-gradient(180deg, #000000 0%, #1a1a1a 50%, #333333 100%);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
   }
 }
 
