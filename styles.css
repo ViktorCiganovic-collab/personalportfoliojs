@@ -3,15 +3,30 @@
 color: #e0e0e0;
 }
 
+  html, body {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+  }
+  #about {
+  min-height: 100vh;
+}
+
+  body {
+    scroll-snap-type: y proximity; /* vertikalno snapovanje */
+    overflow-y: scroll;
+  }
+
+  section {
+    height: 100vh; /* svaki section zauzima pun ekran */
+    scroll-snap-align: start; /* snap na početku section-a */
+  }
+
 body {
-    margin: 0;  
-    /* background: url('https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-108756.jpg'); */
-    background:
-    linear-gradient(180deg, 
-        rgba(0, 0, 39, 1) 0%,    /* Very dark blue (near black) */
-        rgba(0, 0, 77, 0.9) 40%, /* Slightly lighter dark blue */
-        rgba(0, 0, 120, 0.8) 70%, /* Medium dark blue */
-        rgba(0, 0, 200, 0.6) 100%); /* Lighter blue at the bottom */
+    margin: 0; 
+
+
+    background: url('./images/photo-1659469377768-4f42f2f091c5.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;  
@@ -24,24 +39,11 @@ body {
     transition: background 0.5s ease, color 0.5s ease; 
 }
 
-@media (max-width: 1024px) {
 
-    body {
-        background: 
-        linear-gradient(180deg, 
-            rgba(0, 0, 15, 1) 0%,    /* Very dark blue (almost black) */
-            rgba(0, 0, 35, 0.9) 40%, /* Darker blue, closer to black */
-            rgba(0, 0, 60, 0.8) 70%, /* Darker medium blue */
-            rgba(0, 0, 100, 0.6) 100%); /* Darker lighter blue */
-    background-size: cover;
-    background-attachment: fixed;
-    }
-}
 
 /* Dark Mode Styles */
 body.dark-mode {  
-    background: url('https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-108756.jpg');
-    /* background: linear-gradient(to bottom, #000000, #141414); */
+    background: url('https://getwallpapers.com/wallpaper/full/c/1/6/6346.jpg');    
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;  
@@ -58,35 +60,75 @@ body.dark-mode .toggle-mode {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+:root {
+  --toggle-bg: rgba(0, 0, 0, 0.6);
+  --toggle-color: #fff;
+}
+
+body.dark-mode {
+  --toggle-bg: rgba(255, 255, 255, 0.8);
+  --toggle-color: #222;
+}
+
+#toggle-mode {
+  background: transparent;
+  border: 2px solid #00bcd4;
+  color: #00bcd4;
+  border-radius: 50%;
+  padding: 0.7rem;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+#toggle-mode:hover {
+  background: #00bcd4;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+
+
+
 /* Section Layout */
 header, section {
-    min-height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;    
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
     flex-direction: column;
     gap: 30px;
     color: whitesmoke;
     transition: background-color 1.5s ease;    
+    border-bottom: 1px solid white;
 }
 
-#home {
-    background-image: url("./images/bp_background_2_blue1.jpg");
-	width: 100%;
+@media (max-width: 400px) {
+    #home {
+    background-image: url("./images/af5adace-0eb6-4d36-8abb-cc3f99ad051e.JPG") !important;
+    }
+}
+
+#home {   
+    background: url('./images/aHR0cHM6Ly9iLnN0YWJsZWNvZy5jb20vNjMwNjQ4ZDQtNTU3Ny00YmNmLTg4OGMtZGYzYWUyYzg3ZmQxLmpwZWc.webp');
+  	width: 100%;
     height: auto;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: center;
 }
 
 #name {
 border-radius: 5px;
-text-shadow: 2px 2px 15px #333;
+
+
 }
 
 .headLine, .title {
-background: rgb(58, 58, 136) !important;
+background: #00bcd4 !important;
+border-radius: 15px;
 padding: 15px;
 border-radius: 50px;
 text-shadow: 2px 2px 15px #333;
@@ -100,10 +142,17 @@ max-width: 60%;
 }
 
 #about {
+    width: 100%;
     max-width: 400px;
     margin: 0 auto;    
-    /* background: url('https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-108756.jpg'); */
-    /* border-bottom: 1px solid gray; */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+   
+  
     
 }
 
@@ -111,11 +160,17 @@ max-width: 60%;
 
     #about {
         max-width: 100%;
+        min-height: 100vh;
     }
 
 }
 
 .photo {     
+    width: auto;
+    max-width: 80%;
+    height: auto;
+    max-height: 40vh; 
+    border-radius: 20px;
     object-fit: contain;
     
 }
@@ -123,19 +178,22 @@ max-width: 60%;
 #technical_skills {
 height: auto;
 width: 100%;
-margin-bottom: 20vh;
 }
 
 
 
 .skillsDivisions.transitioning {
     opacity: 0;
-    transition: opacity 0.5s ease; /* Smooth fade-out transition */
+    transition: opacity 0.5s ease; 
   }
   
   .skillsDivisions {
-    opacity: 1; /* Default opacity */
+    opacity: 1;
   }
+  
+.down-arrow ion-icon {
+  color:  #00bcd4;
+}
 
 
 .skillsRefreshWrapper {
@@ -253,8 +311,7 @@ margin-bottom: 20vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin-bottom: 20vh;
+    align-items: center;    
 }
 
 .certsDiv div {
@@ -276,13 +333,7 @@ text-shadow: 2px 2px 15px #333;
 @media (max-width: 768px) {
     .certificationsImages:hover {
         transform: none;
-        }
-
-    /* .imgCert {
-        height: 110px;
-        width: 110px;
-    } */
-
+        }  
 
 }
 
@@ -452,7 +503,7 @@ a {
 @media only screen and (max-width: 767px) {
 
     #about{
-        margin-bottom: 20vh;
+        margin-bottom: 0;
     }
 
 
@@ -538,7 +589,6 @@ ion-icon {
     }
 }
 
-/* Optional: Blink effect for the cursor */
 @keyframes blink {
     50% {
         border-color: transparent;

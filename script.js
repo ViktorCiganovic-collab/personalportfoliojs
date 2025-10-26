@@ -170,7 +170,7 @@ var technicalSkills = [
         { name: "JavaScript", icon: "fa-brands fa-js" },
         { name: "React", icon: "fa-brands fa-react" },
         { name: "React Native", icon: "fa-brands fa-react" },
-        { name: "WordPress", icon: "fa-brands fa-wordpress" }  // Moved WordPress to Front-End
+        { name: "WordPress", icon: "fa-brands fa-wordpress" }  
       ]
     },
     {
@@ -625,7 +625,7 @@ const showOnlyOne = () => {
       setTimeout(() => {
         projectContainer.classList.remove('project-hidden');
       }, 50); // allow DOM to update before fading back in
-    }, 400); // match this with your CSS transition time
+    }, 400); 
   };
   
   
@@ -635,9 +635,33 @@ const showOnlyOne = () => {
     if (window.innerWidth >= 480) {
       generateProjects();      
     } else {
-      showOneProject(); // Assume this function handles full list view for desktop
+      showOneProject(); 
     }
   };
   
   window.addEventListener('DOMContentLoaded', updateProjectsView);
   window.addEventListener('resize', updateProjectsView);
+
+   const sections = document.querySelectorAll("section");
+let current = 0;
+let scrolling = false; // flag koji blokira novi scroll dok traje animacija
+
+window.addEventListener("wheel", (e) => {
+  if (scrolling) return; 
+
+  if (e.deltaY > 0) { // scroll down
+    if (current < sections.length - 1) {
+      current++;
+      scrolling = true;
+      sections[current].scrollIntoView({ behavior: "smooth" });
+      setTimeout(() => scrolling = false, 1000); // čekaj 1s dok animacija završi
+    }
+  } else { // scroll up
+    if (current > 0) {
+      current--;
+      scrolling = true;
+      sections[current].scrollIntoView({ behavior: "smooth" });
+      setTimeout(() => scrolling = false, 1000);
+    }
+  }
+});
