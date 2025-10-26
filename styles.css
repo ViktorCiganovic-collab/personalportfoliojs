@@ -1,7 +1,4 @@
 
-* {
-color: #e0e0e0;
-}
 
   html, body {
     height: 100%;
@@ -24,8 +21,6 @@ color: #e0e0e0;
 
 body {
     margin: 0; 
-
-
     background: url('./images/photo-1659469377768-4f42f2f091c5.jpg');
     background-size: cover;
     background-attachment: fixed;
@@ -107,7 +102,10 @@ header, section {
 
 @media (max-width: 600px) {
   body {
-    background-attachment: scroll;
+    background-attachment: scroll !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-color: #000 !important; /* fallback om bilden inte laddas */
   }
 }
 
