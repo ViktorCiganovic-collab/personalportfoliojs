@@ -554,7 +554,7 @@ const showOnlyOne = () => {
     {
       title: "Music Media Player",
       url: "/",
-      imgUrl: "https://i.postimg.cc/QxZBbD4x/Sk-rmbild-2025-02-06-125218.png",
+      imgUrl: "./images/musicplayer.png",
       role: "Frontend Developer",
       technologies: "HTML, CSS, JavaScript",
       challenges: "Developed an interactive and responsive music media player where users can play, pause, shuffle, and skip through songs. The app allows users to control volume, view track details (song name, artist), and enjoy a dynamic playlist. It features a clean interface and smooth transitions. The project uses HTML, CSS, and JavaScript for building a fully-functional music player with features such as a progress bar, volume control, and playlist management."
