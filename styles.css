@@ -105,7 +105,13 @@ header, section {
     border-bottom: 1px solid white;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
+  body {
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 520px) {
     #home {
     background-image: url("./images/af5adace-0eb6-4d36-8abb-cc3f99ad051e.JPG") !important;
     }
