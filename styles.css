@@ -105,7 +105,8 @@ header, section {
     background-attachment: scroll !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
-    background-color: #000 !important; /* fallback om bilden inte laddas */
+    background: linear-gradient(180deg, #000000 0%, #1a1a1a 50%, #333333 100%) !important;
+
   }
 }
 
