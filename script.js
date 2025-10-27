@@ -1,8 +1,8 @@
 
 // Create audio objects
-const clickSound = new Audio('./sounds/622060__rydra_wong__button-click.wav');
-const toggleSound = new Audio('./sounds/622060__rydra_wong__button-click.wav');
-const refreshSound = new Audio('./sounds/563879__woutertenbrink__swoosh.mp3');
+const clickSound = new Audio('./sounds/618188__theplax__mouse-click-3.wav');
+const toggleSound = new Audio('./sounds/724434__sadiquecat__smartplug-switch-on.wav');
+const refreshSound = new Audio('./sounds/618188__theplax__mouse-click-3.wav');
 
 // Add event listener for down arrows
 document.querySelectorAll('.down-arrow').forEach(anchor => {
@@ -674,3 +674,13 @@ window.addEventListener("wheel", (e) => {
     }
   }
 });
+
+// animation for skillsbtn
+const skillsButton = document.getElementById('skillsBtnslide');
+
+skillsButton.addEventListener('click', () => {
+  skillsButton.classList.add('animate')
+  setTimeout(() => {
+    skillsButton.classList.remove('animate');
+  }, 600); 
+})

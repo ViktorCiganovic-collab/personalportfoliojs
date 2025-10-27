@@ -206,6 +206,19 @@ height: auto;
 width: 100%;
 }
 
+#skillsBtnslide {
+background: transparent;
+}
+
+@keyframes slide {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#skillsBtnslide.animate {
+    animation: slide 0.6s ease-in-out;
+}
 
 
 .skillsDivisions.transitioning {
