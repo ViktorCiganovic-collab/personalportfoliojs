@@ -603,8 +603,17 @@ const showOnlyOne = () => {
     `;
   };
   
-  const nextProject = async () => {
+  const nextProject = async (btn) => {
     const projectContainer = document.querySelector('.imageSection');
+
+    // Add spin class on button
+    btn.classList.add('spin');
+
+    // wait until animation is done
+    await new Promise(resolve => setTimeout(resolve, 500));
+
+    //Remove spin class so button gets restored
+    btn.classList.remove('spin');
   
     // Apply fade-out effect
     projectContainer.classList.add('project-hidden');

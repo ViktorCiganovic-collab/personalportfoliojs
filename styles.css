@@ -101,6 +101,25 @@ header, section {
     border-bottom: 1px solid white;
 }
 
+@media (max-height: 648px) {
+    section {
+        height: auto; /* låter innehållet expandera naturligt */
+        padding: 2rem 1rem; /* lägg till utrymme */
+    }
+
+    .headLine, .title {
+        font-size: 1.2rem;
+        padding: 10px;
+        max-width: 90%;
+    }
+
+    #technical_skills {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
 
 @media (max-width: 1024px) {
   section {
@@ -210,21 +229,46 @@ width: 100%;
   }
   
   .sliderRefreshBtn {
-    background: transparent;
+    background: #007bff;
     border: none;
-    font-size: 2rem;
+    border-radius: 50px;
+    padding: 0.7em 1.5em;
+    font-size: 1.2rem;
     cursor: pointer;
-    color: #444;
+    color: #fff;
     transition: transform 0.5s ease;
     transform-origin: center center;
     -webkit-tap-highlight-color: transparent;
+      display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  transition: transform 0.4s ease, background 0.3s ease, color 0.3s ease;
     outline: none;
   }
-  
+
   .sliderRefreshBtn:hover {
-    transform: rotate(180deg);
-    color: #007bff;
-  } 
+  background: #0056b3;
+  transform: scale(1.1);
+}
+  
+ @keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(180deg); }
+}
+
+.sliderRefreshBtn .icon {
+  display: inline-block;
+  transition: transform 0.5s ease;
+}
+
+.sliderRefreshBtn.spin .icon {
+  animation: spin 0.5s ease forwards;
+}
+
+.sliderRefreshBtn.spin  {
+  animation: spin 0.5s ease forwards;
+  color: #007bff;
+}
   
 
 
