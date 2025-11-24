@@ -123,13 +123,16 @@ header, section {
 
 @media (max-width: 1024px) {
   section {
-      background: linear-gradient(
-      180deg,
-      #0f0f0f 0%,
-      #ff6f61 40%,
-      #ffcc70 70%,
-      #1a1a1a 100%
-    );
+ background: linear-gradient(
+   180deg,
+  #000000 0%,
+  #0a0f29 80%,
+  #141414 95%,
+  #1a1a1a 90%,
+  #2c2c2c 100%
+);
+
+
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: scroll;
@@ -750,7 +753,8 @@ border-radius: 15px;
 padding: 15px;
 border-radius: 50px;
 text-shadow: 2px 2px 15px #333;
-max-width: 60%;
+max-width: 100%;
+text-align: center !important;
   }
   
   .project-details {

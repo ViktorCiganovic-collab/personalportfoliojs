@@ -593,7 +593,7 @@ const showOnlyOne = () => {
       <div class="project-nav">
         
         <div class="project-details">
-          <h3 class="oneProjectTitle">${title}</h3>
+          <h3 class="oneProjectTitle" class="titleOfProject">${title}</h3>
           <a href="${url}" target="_blank">
             <img src="${imgUrl}" class="projectImgsForPhone" alt="${title}">
           </a>
