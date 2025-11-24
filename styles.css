@@ -186,10 +186,16 @@ max-width: 60%;
 }
 
 @media (max-width: 600px) {
-    .headLine {
-        background: transparent !important;        
-     }
+  .headLine,
+  .title {
+    background: none !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0.5rem !important;
+  }
 }
+
 
 #about {
     width: 100%;    
