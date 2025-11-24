@@ -574,7 +574,7 @@ const showOnlyOne = () => {
             <a href="${project.url}" target="_blank">
             <img src="${project.imgUrl}" class="img" alt="Cash Register Project">
             </a>
-            <h5>${project.title}</h5>
+            <h5 class="titleOfProject">${project.title}</h5>
             <p><strong>Role:</strong>${project.role}</p>
             <p><strong>Technologies:</strong>${project.technologies}</p>
             <p><strong>Challenges:</strong>${project.challenges}</p>
