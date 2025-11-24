@@ -537,7 +537,7 @@ const showOnlyOne = () => {
     },
     {
       title: "Travel Booking Web App",
-      url: "https://voyavista-gvcnd9azepede2as.northeurope-01.azurewebsites.net/Travelpackage",
+      url: "https://voyavista-gvcnd9azepede2as.northeurope-01.azurewebsites.net",
       imgUrl: "./images/tripbookingwebsite.png",
       role: "Fullstack Developer",
       technologies: "ASP.NET MVC, Entity Framework, SQL Server, Stripe",
