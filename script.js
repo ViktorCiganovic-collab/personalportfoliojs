@@ -174,18 +174,18 @@ var technicalSkills = [
     ]
   },
   {
-    category: "Back End",
-    details: [
-      { name: "Node.js", icon: "fa-brands fa-node-js" },
-      { name: "Express.js", icon: "fa-brands fa-node-js" },
-      { name: "C#", icon: "fa-brands fa-microsoft" },
-      { name: "Blazor", icon: "fa-brands fa-microsoft" },
-      { name: ".NET Web API", icon: "fa-brands fa-microsoft" },
-      { name: "Razor Pages", icon: "fa-brands fa-microsoft" },
-      { name: "REST API Design", icon: "fa-solid fa-code" },
-      { name: "Postman", icon: "fa-brands fa-get-pocket" }
-    ]
-  },
+  category: "Back End",
+  details: [
+    { name: "Node.js", icon: "fa-brands fa-node-js" },
+    { name: "Express.js", icon: "fa-brands fa-node-js" },
+    { name: "Blazor", icon: "fa-solid fa-code" },
+    { name: ".NET Web API", icon: "fa-solid fa-code" },
+    { name: "Razor Pages", icon: "fa-solid fa-code" },
+    { name: "MVC", icon: "fa-solid fa-layer-group" },
+    { name: "REST API Design", icon: "fa-solid fa-code" },
+    { name: "Postman", icon: "fa-brands fa-get-pocket" }
+  ]
+},
   {
     category: "Databases",
     details: [
