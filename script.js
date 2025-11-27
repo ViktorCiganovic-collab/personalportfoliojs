@@ -213,6 +213,7 @@ var technicalSkills = [
     details: [
       { name: "AWS", icon: "fa-brands fa-aws" },
       { name: "Azure", icon: "fa-brands fa-microsoft" },
+      { name: "MongoDB Atlas", icon: "fa-solid fa-cloud" },
       { name: "GitHub", icon: "fa-brands fa-github" },
       { name: "Bash", icon: "fa-solid fa-terminal" }
     ]
