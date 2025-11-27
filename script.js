@@ -159,74 +159,76 @@ const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 var currentIndex = 0;
 
-var technicalSkills = [    
-    {
-      category: "Front End",
-      details: [
-        { name: "HTML", icon: "fa-brands fa-html5" },
-        { name: "CSS", icon: "fa-brands fa-css3-alt" },
-        { name: "Bootstrap", icon: "fa-brands fa-bootstrap" },
-        { name: "Tailwind", icon: "fa-brands fa-css3-alt" },
-        { name: "JavaScript", icon: "fa-brands fa-js" },
-        { name: "React", icon: "fa-brands fa-react" },
-        { name: "React Native", icon: "fa-brands fa-react" },
-        { name: "WordPress", icon: "fa-brands fa-wordpress" }  
-      ]
-    },
-    {
-      category: "Back End",
-      details: [
-        { name: "Node.js", icon: "fa-brands fa-node-js" },
-        { name: "Express.js", icon: "fa-brands fa-node-js" },
-        { name: "C#", icon: "fa-brands fa-microsoft" },
-        { name: "MongoDB", icon: "fa-solid fa-database" },
-        { name: "Mongoose", icon: "fa-solid fa-database" },
-        { name: "PostgreSQL", icon: "fa-solid fa-database" },
-        { name: "SQL", icon: "fa-solid fa-database" },
-        { name: "Entity Framework", icon: "fa-solid fa-database" }
-      ]
-    },
-    {
-      category: "Other Skills",
-      details: [
-        { name: "GitHub", icon: "fa-brands fa-github" },
-        { name: "Bash", icon: "fa-solid fa-terminal" },
-        { name: "Data Visualization", icon: "fa-solid fa-chart-line" },
-        { name: "Azure Fundamentals", icon: "fa-solid fa-cloud-sun" },
-        { name: "Java", icon: "fa-brands fa-java" },
-        { name: "Python", icon: "fa-brands fa-python" },
-        { name: "Network Fundamentals", icon: 'fa-solid fa-network-wired' },
-        { name: "Typescript", icon: "fa-brands fa-js"}
-      ]
-    },
-    {
-      category: "CMS + Tools",
-      details: [
-        { name: "Webflow", icon: "fa-solid fa-laptop" }, 
-        { name: "WordPress", icon: "fa-brands fa-wordpress" },       
-        { name: "Drupal", icon: "fa-brands fa-drupal" },     
-      ]
-    },
-    {
-      category: "JavaScript Frameworks",
-      details: [
-        { name: "Next.js", icon: "fa-solid fa-forward" }, 
-        { name: "Angular", icon: "fa-brands fa-angular" },
-        { name: "Vue.js", icon: "fa-brands fa-vuejs" },
-        { name: "React", icon: "fa-brands fa-react" },      
-        { name: "Node.js", icon: "fa-brands fa-node-js" },
-        { name: "Express.js", icon: "fa-brands fa-node-js" }
-      ]
-    },
-    {
-      category: "Cloud Platforms",
-      details: [
-        { name: "AWS", icon: "fa-brands fa-aws" },
-        { name: "Azure", icon: "fa-brands fa-microsoft" },           
-      ]
-    }
-    
-  ]
+var technicalSkills = [
+  {
+    category: "Front End",
+    details: [
+      { name: "HTML", icon: "fa-brands fa-html5" },
+      { name: "CSS", icon: "fa-brands fa-css3-alt" },
+      { name: "Bootstrap", icon: "fa-brands fa-bootstrap" },
+      { name: "Tailwind", icon: "fa-brands fa-css3-alt" },
+      { name: "JavaScript", icon: "fa-brands fa-js" },
+      { name: "TypeScript", icon: "fa-brands fa-js" },
+      { name: "React", icon: "fa-brands fa-react" },
+      { name: "Next.js", icon: "fa-solid fa-forward" }
+    ]
+  },
+  {
+    category: "Back End",
+    details: [
+      { name: "Node.js", icon: "fa-brands fa-node-js" },
+      { name: "Express.js", icon: "fa-brands fa-node-js" },
+      { name: "C#", icon: "fa-brands fa-microsoft" },
+      { name: "Blazor", icon: "fa-brands fa-microsoft" },
+      { name: ".NET Web API", icon: "fa-brands fa-microsoft" },
+      { name: "Razor Pages", icon: "fa-brands fa-microsoft" },
+      { name: "REST API Design", icon: "fa-solid fa-code" },
+      { name: "Postman", icon: "fa-brands fa-get-pocket" }
+    ]
+  },
+  {
+    category: "Databases",
+    details: [
+      { name: "MongoDB", icon: "fa-solid fa-database" },
+      { name: "MongoDB Atlas", icon: "fa-solid fa-cloud" },
+      { name: "Mongoose", icon: "fa-solid fa-database" },
+      { name: "PostgreSQL", icon: "fa-solid fa-database" },
+      { name: "SQL", icon: "fa-solid fa-database" },
+      { name: "SQL Server", icon: "fa-solid fa-database" },
+      { name: "Entity Framework", icon: "fa-solid fa-database" }
+    ]
+  },
+  {
+    category: "CMS & Tools",
+    details: [
+      { name: "WordPress", icon: "fa-brands fa-wordpress" },
+      { name: "Webflow", icon: "fa-solid fa-laptop" },
+      { name: "Drupal", icon: "fa-brands fa-drupal" },
+      { name: "Figma", icon: "fa-brands fa-figma" },
+      { name: "jQuery", icon: "fa-brands fa-js" }
+    ]
+  },
+  {
+    category: "Cloud & DevOps",
+    details: [
+      { name: "AWS", icon: "fa-brands fa-aws" },
+      { name: "Azure", icon: "fa-brands fa-microsoft" },
+      { name: "GitHub", icon: "fa-brands fa-github" },
+      { name: "Bash", icon: "fa-solid fa-terminal" }
+    ]
+  },
+  {
+    category: "Other Skills",
+    details: [
+      { name: "Python", icon: "fa-brands fa-python" },
+      { name: "Java", icon: "fa-brands fa-java" },
+      { name: "Network Fundamentals", icon: "fa-solid fa-network-wired" },
+      { name: "Data Visualization", icon: "fa-solid fa-chart-line" },
+      { name: "Responsive Design", icon: "fa-solid fa-mobile-alt" }
+    ]
+  }
+];
+
 
   let start = 0;
   let itemsPerSlide = 3;
