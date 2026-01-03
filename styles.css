@@ -68,8 +68,8 @@ body.dark-mode {
 
 #toggle-mode {
   background: transparent;
-  border: 2px solid #00bcd4;
-  color: #00bcd4;
+  border: 2px solid #405153;
+  color: #839092;
   border-radius: 50%;
   padding: 0.7rem;
   font-size: 1.4rem;
@@ -80,7 +80,7 @@ body.dark-mode {
 }
 
 #toggle-mode:hover {
-  background: #00bcd4;
+  background: #6a8abb;
   color: #fff;
   transform: scale(1.1);
 }
@@ -145,7 +145,7 @@ header, section {
 
 @media (max-width: 520px) {
     #home {
-    background-image: url("./images/thumb-1920-1046878.jpg") !important;
+    background-image: url("./images/photo-1583223667854-e0e05b1ad4f3.jpg") !important;
     }
 
     .headLine .title {
@@ -158,7 +158,7 @@ header, section {
 }
 
 #home {   
-    background: url('./images/thumb-1920-1046878.jpg');
+    background: url('./images/photo-1583223667854-e0e05b1ad4f3.jpg');
   	width: 100%;
     height: auto;
 	background-size: cover;
