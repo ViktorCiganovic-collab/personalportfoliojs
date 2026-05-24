@@ -402,15 +402,16 @@ const showOnlyOne = () => {
       imgUrl: "https://files.softicons.com/download/social-media-icons/classic-social-media-icons-by-brainleaf/png/128x128/bootstrap-icon.png"
     },
     {
+      type: "javascript",
+      url: "https://www.freecodecamp.org/certification/ViktorCiganovic/javascript-algorithms-and-data-structures-v8",
+      imgUrl: "https://pyongwonlee.com/wp-content/uploads/2021/05/javascript_logo.png"
+    },
+    {
       type: "database",
       url: "https://www.freecodecamp.org/certification/ViktorCiganovic/relational-database-v8",
       imgUrl: "https://api.nuget.org/v3-flatcontainer/easydata.entityframeworkcore.relational/1.5.7/icon"
     },
-    {
-      type: "javascript",
-      url: "https://www.freecodecamp.org/certification/ViktorCiganovic/javascript-algorithms-and-data-structures-v8",
-      imgUrl: "https://cdn.iconscout.com/icon/free/png-256/free-javascript-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-vol-4-pack-logos-icons-3031512.png?f=webp&w=128"
-    }
+    
   ];
   
   const divisionCertifications = document.querySelector('.certsDivision');
