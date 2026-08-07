@@ -404,7 +404,7 @@ const showOnlyOne = () => {
     {
       type: "javascript",
       url: "https://www.freecodecamp.org/certification/ViktorCiganovic/javascript-algorithms-and-data-structures-v8",
-      imgUrl: "https://pyongwonlee.com/wp-content/uploads/2021/05/javascript_logo.png"
+      imgUrl: "https://cdn-icons-png.flaticon.com/256/8576/8576351.png"
     },
     {
       type: "database",
