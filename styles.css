@@ -1,4 +1,25 @@
+#home {
+  position: relative;
+  overflow: hidden;
+}
 
+#home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.72) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+#home > * {
+  position: relative;
+  z-index: 1;
+}
 
   html, body {
     height: 100%;
@@ -22,7 +43,7 @@
 
 body {
     margin: 0; 
-    background: url('./images/photo-1659469377768-4f42f2f091c5.jpg');
+background: linear-gradient(160deg, #07090f 0%, #0d1326 55%, #12121d 100%);
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;  
@@ -85,9 +106,6 @@ body.dark-mode {
   transform: scale(1.1);
 }
 
-
-
-
 /* Section Layout */
 header, section {
     min-height: 100vh;    
@@ -98,7 +116,6 @@ header, section {
     gap: 30px;
     color: whitesmoke;
     transition: background-color 1.5s ease;    
-    border-bottom: 1px solid white;
 }
 
 @media (max-height: 648px) {
@@ -119,7 +136,6 @@ header, section {
         gap: 1rem;
     }
 }
-
 
 @media (max-width: 1024px) {
   section {
@@ -143,6 +159,13 @@ header, section {
   }
 }
 
+#about {
+background-image: url('https://images3.alphacoders.com/138/1382775.png');
+background-repeat: no-repeat;
+background-size: cover;
+ background-attachment: fixed;
+}
+
 @media (max-width: 520px) {
    
 
@@ -156,7 +179,7 @@ header, section {
 }
 
 #home {   
-    background: url('https://images.pexels.com/photos/4067506/pexels-photo-4067506.jpeg?auto=compress&w=1260&h=750&dpr=2');
+    background: url('./images/photo-1779444480588-77001f36871b.avif');
   	width: 100%;
     height: auto;
 	background-size: cover;
@@ -259,7 +282,7 @@ background: transparent;
   }
   
 .down-arrow ion-icon {
-  color:  #00bcd4;
+  color:  whitesmoke;
 }
 
 
@@ -311,7 +334,17 @@ background: transparent;
   color: #007bff;
 }
   
+#technical_skills {
+background-image: url('https://images.unsplash.com/photo-1510519138101-570d1dca3d66?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D') !important;
+background-size: cover;
+background-repeat: no-repeat;
+}
 
+.skillsDiv {
+  
+  border-radius: 16px;
+  padding: 1.5rem 1.75rem;
+}
 
 @media (min-width: 480px) {
 
@@ -400,6 +433,10 @@ background: transparent;
 }
 
 .certsDiv {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/069/956/547/large_2x/black-stone-texture-background-matte-finish-drama-abstract-dark-rock-surface-with-subtle-light-and-shadow-moody-and-minimal-rough-detail-free-photo.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -439,7 +476,11 @@ text-shadow: 2px 2px 15px #333;
 }
 
 .sectionProjects {       
-        
+        background-image: url('./images/1fce802f-dc57-4a2d-94a7-618cae3312a0.webp');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
         width: 100%;
         height: auto;
     
@@ -465,17 +506,16 @@ text-shadow: 2px 2px 15px #333;
 }
 
 .project {
-    width: 100%;  
-    max-width: 500px;   
+    width: 100%;
+    max-width: 500px;
     height: 100%;
-    box-sizing: border-box; 
-    margin: 0; 
-    transition: 0.3s;
-    cursor: pointer;    
+    box-sizing: border-box;
+    margin: 0;
+    padding: 1rem;
+    cursor: pointer;
     border-radius: 20px;
-    background-color: transparent;
-    border-bottom: 1px solid gray;
-     
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.55), 0 2px 8px rgba(0, 0, 0, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 
@@ -488,7 +528,7 @@ text-shadow: 2px 2px 15px #333;
 
 .project .img {
     width: 100%; 
-    height: 300px; 
+    height: auto; 
     border-radius: 20px;
     object-fit: cover;    
     z-index: 1; 
@@ -791,3 +831,29 @@ text-align: center !important;
   
 
 
+/* 1. Glavni kontejner gdje se ubacuju kategorije */
+#technical_skills .skillsDivisions {
+    min-height: 360px; /* prilagodi prema visini najduže liste kad je sve prikazano */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2.5rem;
+}
+
+/* 2. Svaka kolona/kategorija u većem prikazu */
+#technical_skills .skillsDivMany {
+    min-width: 180px;
+}
+
+/* 3. Na malim ekranima (< 480px) gdje se koristi .slider */
+@media (max-width: 479px) {
+    #technical_skills .skillsDivisions {
+        min-height: 320px; /* prilagodi prema visini jedne kategorije na mobilnom */
+        align-items: center;
+    }
+
+    #technical_skills .slider {
+        min-height: inherit;
+        align-items: center;
+    }
+}

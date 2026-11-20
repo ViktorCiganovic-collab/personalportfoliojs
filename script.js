@@ -399,18 +399,28 @@ const showOnlyOne = () => {
     {
       type: "front-end-development-libraries",
       url: "https://www.freecodecamp.org/certification/ViktorCiganovic/front-end-development-libraries",
-      imgUrl: "https://files.softicons.com/download/social-media-icons/classic-social-media-icons-by-brainleaf/png/128x128/bootstrap-icon.png"
+      imgUrl: "https://certiport.pearsonvue.com/getattachment/Certifications/ITSpecialist/Certification/Badging/Networking/ITS-Badges_Networking_1200px.png?lang=en-US&width=600&height=600&ext=.png"
     },
     {
       type: "javascript",
       url: "https://www.freecodecamp.org/certification/ViktorCiganovic/javascript-algorithms-and-data-structures-v8",
-      imgUrl: "https://cdn-icons-png.flaticon.com/256/8576/8576351.png"
+      imgUrl: "https://www.secnix.com/wp-content/themes/secnixwordpress/assets/images/services/responsive-web-design.png"
     },
     {
       type: "database",
       url: "https://www.freecodecamp.org/certification/ViktorCiganovic/relational-database-v8",
-      imgUrl: "https://api.nuget.org/v3-flatcontainer/easydata.entityframeworkcore.relational/1.5.7/icon"
+      imgUrl: "https://www.prodigylearning.com/wp-content/uploads/2020/11/azure-data-fundamentals-600x600-002.png"
     },
+       {
+      type: "database",
+      url: "https://www.freecodecamp.org/certification/ViktorCiganovic/relational-database-v8",
+      imgUrl: "https://fusion.rs/wp-content/uploads/2021/02/netcorelogo.png"
+    },
+      {
+      type: "database",
+      url: "https://www.freecodecamp.org/certification/ViktorCiganovic/relational-database-v8",
+      imgUrl: "https://d36ai2hkxl16us.cloudfront.net/course-uploads/7985c085-3b6a-42d5-b668-e41cb6eedeb0/4gnbpsehb9ih-credlybadge-associatedeveloper2.png"
+    }
     
   ];
   
@@ -498,72 +508,72 @@ const showOnlyOne = () => {
   document.addEventListener('DOMContentLoaded', updateCertificationsDisplay);
   window.addEventListener('resize', updateCertificationsDisplay);
 
-  const projects = [
-    {
-      title: "Movie streaming app",
-      url: "/",
-      imgUrl: "./images/Skärmbild 2024-11-26 095101.png",
-      role: "Fullstack Developer",
-      technologies: "React, Tailwind, Node.js",
-      challenges: "A responsive movie app with search filter function that was created by me with React, react router for the links and state management for the login process."
-    },
-    {
-      title: "Ecommerce Website",
-      url: "https://shoeshopper.vercel.app/",
-      imgUrl: "./images/eCommercewebsite.png",
-      role: "Fullstack Developer",
-      technologies: "React, Tailwind, CSS",
-      challenges: "A responsive e-commerce web app built with React and Tailwind CSS. It features product browsing, detailed views, and a shopping cart with localStorage persistence. React Router ensures smooth navigation across devices. The design is fully responsive for an optimal shopping experience on mobile and desktop, showcasing my skills in React, state management, and UI design."
-    },
-    {
-      title: "Gym Website",
-      url: "https://gym-app-rho-khaki.vercel.app/",
-      imgUrl: "./images/gymwebsite.png",
-      role: "Frontend Developer",
-      technologies: "React, Bootstrap, SCSS",
-      challenges: "A team project focused on creating a responsive website for home workout videos, providing users with easy access to a variety of training sessions that can be done from the comfort of their homes."
-    },
-    {
-      title: "Online Calculator",
-      url: "https://codepen.io/ViktorCiganovic/full/QWRKoJJ",
-      imgUrl: "./images/online_calculator.png",
-      role: "Frontend Developer",
-      technologies: "HTML, CSS, JavaScript",
-      challenges: "Ensured precision in calculations, handled user input validation to prevent errors, and created an intuitive and responsive layout that enhances user interaction."
-    },
-    {
-      title: "Exercise Browser App",
-      url: "https://exercise-browser-app.vercel.app",
-      imgUrl: "./images/wordpress.png",
-      role: "Frontend Developer",
-      technologies: "React, Bootstrap, React Router",
-      challenges: "Built with React, Bootstrap, and React Router, this app lets users browse and search for fitness exercises. Users can filter results in real-time and view detailed information by navigating to individual exercise pages. It showcases state management with useState, dynamic rendering, and responsive design with Bootstrap."
-    },
-    {
-      title: "Travel Booking Web App",
-      url: "https://voyavista-gvcnd9azepede2as.northeurope-01.azurewebsites.net",
-      imgUrl: "./images/tripbookingwebsite.png",
-      role: "Fullstack Developer",
-      technologies: "ASP.NET MVC, Entity Framework, SQL Server, Stripe",
-      challenges: "Developed a fullstack web application where customers can view and book trips to various destinations. Utilized Entity Framework and SQL Server for database management, and integrated Stripe for payment processing. The application features a user-friendly interface, allowing customers to view available trips by date and make secure bookings."
-    },
-    {
-      title: "Munamii Cakery",
-      url: "https://mynodeapp-bwfy.onrender.com",
-      imgUrl: "./images/munami-cakery.png",
-      role: "Fullstack Developer",
-      technologies: "HTML, Bootstrap, JavaScript, MongoDB Atlas",
-      challenges: "Developed a responsive web application for a cakery where customers can browse cakes and cupcakes, and place orders. The application integrates MongoDB Atlas for database management to handle orders and inventory. I ensured the site’s responsiveness, allowing a seamless experience across all devices. The ordering functionality allows users to view product details and submit their orders online, with a simple and efficient interface."
-    },
-    {
-      title: "Music Media Player",
-      url: "/",
-      imgUrl: "./images/musicplayer.png",
-      role: "Frontend Developer",
-      technologies: "HTML, CSS, JavaScript",
-      challenges: "Developed an interactive and responsive music media player where users can play, pause, shuffle, and skip through songs. The app allows users to control volume, view track details (song name, artist), and enjoy a dynamic playlist. It features a clean interface and smooth transitions. The project uses HTML, CSS, and JavaScript for building a fully-functional music player with features such as a progress bar, volume control, and playlist management."
-    }
-  ];
+ const projects = [
+  {
+    title: "Nordic Certification Platform",
+    url: "https://www.scservices.se/",
+    imgUrl: "./images/SCS.png",
+    role: "Web Designer & Systems architect",
+    technologies: "HTML, CSS, JavaScript, .NET, Stripe",
+challenges: "Built a responsive Nordic certification platform for booking certification tests alongside practice materials, mock exams, and courses. Focused on clear navigation, structured learning flows, and a clean, reliable interface across devices."  },
+   {
+    title: "Fitness app",
+    url: "https://calorie-tracker-viktor.netlify.app/",
+    imgUrl: "./images/fitness_app.png",
+    role: "Frontend Developer",
+    technologies: "React, Bootstrap, React Router",
+    challenges: "Created an interactive exercise browser with live search/filtering, individual exercise detail views, and clean state management using useState and React Router for smooth discovery."
+  },
+  {
+    title: "Movie streaming app",
+    url: "/",
+    imgUrl: "./images/Skärmbild 2024-11-26 095101.png",
+    role: "Fullstack Developer",
+    technologies: "React, Tailwind, Node.js",
+    challenges: "Built a responsive movie browsing app with real-time search filtering, React Router navigation, and structured state management for the login flow, paired with a dark, focused UI."
+  },
+  {
+    title: "Ecommerce Website",
+    url: "https://shoeshopper.vercel.app/",
+    imgUrl: "./images/eCommercewebsite.png",
+    role: "Fullstack Developer",
+    technologies: "React, Tailwind, CSS",
+    challenges: "Developed a responsive e-commerce application with product browsing, detailed views, and localStorage cart persistence. Focused on clean UI structure, React Router flow, and consistent experience across desktop and mobile."
+  },
+  {
+    title: "Gym Website",
+    url: "https://gym-app-rho-khaki.vercel.app/",
+    imgUrl: "./images/gymwebsite.png",
+    role: "Frontend Developer",
+    technologies: "React, Bootstrap, SCSS",
+    challenges: "Collaborated in a team to build a responsive workout video platform with accessible session browsing and structured layouts for at-home training."
+  },
+ 
+  {
+    title: "Travel Booking Web App",
+    url: "https://voyavista-gvcnd9azepede2as.northeurope-01.azurewebsites.net",
+    imgUrl: "./images/voyavista.png",
+    role: "Fullstack Developer",
+    technologies: "ASP.NET MVC, Entity Framework, SQL Server, Stripe",
+    challenges: "Built a fullstack travel booking platform using ASP.NET MVC, Entity Framework, and SQL Server for data and trip availability, with Stripe payment integration and a clear booking flow."
+  },
+  {
+    title: "Munamii Cakery",
+    url: "https://mynodeapp-bwfy.onrender.com",
+    imgUrl: "./images/munami_cakery_bakery.png",
+    role: "Fullstack Developer",
+    technologies: "HTML, Bootstrap, JavaScript, MongoDB",
+    challenges: "Developed a responsive ordering web app for a cakery backed by MongoDB Atlas for orders and inventory, combining clean presentation with practical order submission across devices."
+  },
+  {
+    title: "Music Media Player",
+    url: "/",
+    imgUrl: "./images/musicplayer.png",
+    role: "Frontend Developer",
+    technologies: "HTML, CSS, JavaScript",
+    challenges: "Built a responsive media player with play, pause, shuffle, track skipping, volume and progress controls, and track metadata display in a clean, transition-friendly interface."
+  }
+];
   
   
 
