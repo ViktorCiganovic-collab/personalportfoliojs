@@ -3,6 +3,10 @@
   overflow: hidden;
 }
 
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
 #home::before {
   content: "";
   position: absolute;
@@ -168,6 +172,9 @@ background-size: cover;
 
 @media (max-width: 520px) {
    
+    #about {
+    background-image: url('./images/backgroundimg.png');
+    }
 
     .headLine .title {
  background: transparent !important;
@@ -293,7 +300,8 @@ background: transparent;
   }
   
   .sliderRefreshBtn {
-    background: #007bff;
+    background: transparent;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.35);
     border: none;
     border-radius: 50px;
     padding: 0.7em 1.5em;
@@ -311,7 +319,6 @@ background: transparent;
   }
 
   .sliderRefreshBtn:hover {
-  background: #0056b3;
   transform: scale(1.1);
 }
   
@@ -831,9 +838,8 @@ text-align: center !important;
   
 
 
-/* 1. Glavni kontejner gdje se ubacuju kategorije */
 #technical_skills .skillsDivisions {
-    min-height: 360px; /* prilagodi prema visini najduže liste kad je sve prikazano */
+    min-height: 360px; 
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -844,16 +850,30 @@ text-align: center !important;
 #technical_skills .skillsDivMany {
     min-width: 180px;
 }
+@media (max-width: 767px) {
+    #technical_skills {
+        height: auto;
+        min-height: 100vh;
+    }
 
-/* 3. Na malim ekranima (< 480px) gdje se koristi .slider */
-@media (max-width: 479px) {
     #technical_skills .skillsDivisions {
-        min-height: 320px; /* prilagodi prema visini jedne kategorije na mobilnom */
-        align-items: center;
+        min-height: 480px; /* prilagodi da bude veće od najduže kategorije na mobilnom */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
     }
 
     #technical_skills .slider {
-        min-height: inherit;
+        min-height: 480px;
+        width: 100%;
         align-items: center;
+        overflow: visible; /* sprječava čudno odsjecanje tokom animacije */
+    }
+
+    #technical_skills .skillsDiv {
+        min-height: 440px;
+        width: 100%;
+        box-sizing: border-box;
     }
 }
