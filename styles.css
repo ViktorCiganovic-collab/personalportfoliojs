@@ -174,6 +174,7 @@ background-size: cover;
    
     #about {
     background-image: url('./images/backgroundimg.png');
+    background-attachment: scroll;
     }
 
     .headLine .title {
