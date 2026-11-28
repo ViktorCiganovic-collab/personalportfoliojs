@@ -879,6 +879,12 @@ text-align: center !important;
     }
 }
 
+#current_project {
+background-image: url('./images/1fce802f-dc57-4a2d-94a7-618cae3312a0.webp');
+background-repeat: no-repeat;
+background-size: cover;
+}
+
 .ecommerce_project, .featured-corebyte {
 width: 100%;
 }
@@ -900,4 +906,35 @@ max-width: 1000px !important;
   width: 95%;
   max-width: 780px;
   margin: 1.25rem auto 0;
+}
+
+@media (max-width: 520px) {
+  .current-project__info {
+    width: 92%;
+    margin: 0.75rem auto 0;
+    padding: 0.65rem 0.75rem;
+    font-size: 0.78rem;
+    line-height: 1.38;
+  }
+
+  .current-project__info p {
+    margin: 0.25rem 0;
+  }
+}
+
+.certsDiv .cert-slider {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.cert-slider .sliderBtns {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.cert-slider .certificationsImages {
+  display: block;
 }
