@@ -266,7 +266,7 @@ width: 100%;
 }
 
 #skillsBtnslide {
-background: transparent;
+box-shadow: none ;
 }
 
 @keyframes slide {
@@ -877,4 +877,27 @@ text-align: center !important;
         width: 100%;
         box-sizing: border-box;
     }
+}
+
+.ecommerce_project, .featured-corebyte {
+width: 100%;
+}
+
+@media (min-width: 1200px) {
+.ecommerce_project {
+max-width: 1000px !important;
+}
+}
+
+@media (max-width: 520px) 
+{
+    .ecommerce_project {
+    max-width: 95% !important;
+    }
+}
+
+.current-project__info {
+  width: 95%;
+  max-width: 780px;
+  margin: 1.25rem auto 0;
 }

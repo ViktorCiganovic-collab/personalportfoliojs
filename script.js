@@ -572,7 +572,7 @@ challenges: "Built a responsive Nordic certification platform for booking certif
     role: "Frontend Developer",
     technologies: "HTML, CSS, JavaScript",
     challenges: "Built a responsive media player with play, pause, shuffle, track skipping, volume and progress controls, and track metadata display in a clean, transition-friendly interface."
-  }
+  },  
 ];
   
   
@@ -588,10 +588,10 @@ challenges: "Built a responsive Nordic certification platform for booking certif
             <a href="${project.url}" target="_blank">
             <img src="${project.imgUrl}" class="img" alt="Cash Register Project">
             </a>
-            <h5 class="titleOfProject">${project.title}</h5>
-            <p><strong>Role:</strong>${project.role}</p>
-            <p><strong>Technologies:</strong>${project.technologies}</p>
-            <p><strong>Challenges:</strong>${project.challenges}</p>
+            <h5 class="titleOfProject"> ${project.title}</h5>
+            <p><strong>Role:</strong> ${project.role}</p>
+            <p><strong>Technologies:</strong> ${project.technologies}</p>
+            <p><strong>Challenges:</strong> ${project.challenges}</p>
         </div>
       `;
     });
