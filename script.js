@@ -460,7 +460,7 @@ const showOnlyOne = () => {
     const cert = arrayCertifications[index];
     divisionCertifications.innerHTML = `
       <div class="cert-slider">
-        <button class="sliderBtns" id="prevCert">&larr;</button>
+        <button class="sliderBtns" id="prevCert"><ion-icon name="chevron-back-outline"></ion-icon></button>
   
         <div class="certificate single-cert">
           <a href="${cert.url}" target="_blank">
@@ -468,7 +468,7 @@ const showOnlyOne = () => {
           </a>
         </div>
   
-        <button class="sliderBtns" id="nextCert">&rarr;</button>
+        <button class="sliderBtns" id="nextCert"><ion-icon name="chevron-forward-outline"></ion-icon></button>
       </div>
     `;
   
