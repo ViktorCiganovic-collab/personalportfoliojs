@@ -938,3 +938,11 @@ max-width: 1000px !important;
 .cert-slider .certificationsImages {
   display: block;
 }
+
+.sliderBtns {
+  width: 44px;
+  height: 44px;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1;
+}
